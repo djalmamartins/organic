@@ -1,0 +1,186 @@
+/**
+ * Organic UI v2
+ * Badge
+ */
+
+.org-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--org-space-1);
+
+    min-height: 1.5rem;
+    padding: .25rem .55rem;
+
+    border: 1px solid transparent;
+    border-radius: var(--org-radius);
+
+    font-size: var(--org-font-size-xs);
+    font-weight: var(--org-font-weight-semibold);
+    line-height: 1;
+
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+/* Basic */
+
+.org-badge-default {
+    background: var(--org-light);
+    color: var(--org-text);
+    border-color: var(--org-border);
+}
+
+.org-badge-primary {
+    background: color-mix(
+            in srgb,
+            var(--org-primary) 12%,
+            var(--org-white)
+    );
+    color: var(--org-primary-dark);
+}
+
+.org-badge-success {
+    background: color-mix(
+            in srgb,
+            var(--org-success) 12%,
+            var(--org-white)
+    );
+    color: var(--org-success);
+}
+
+.org-badge-info {
+    background: color-mix(
+            in srgb,
+            var(--org-info) 12%,
+            var(--org-white)
+    );
+    color: var(--org-info);
+}
+
+.org-badge-warning {
+    background: color-mix(
+            in srgb,
+            var(--org-warning) 18%,
+            var(--org-white)
+    );
+    color: var(--org-dark);
+}
+
+.org-badge-danger {
+    background: color-mix(
+            in srgb,
+            var(--org-danger) 12%,
+            var(--org-white)
+    );
+    color: var(--org-danger);
+}
+
+.org-badge-neutral {
+    background: var(--org-light);
+    color: var(--org-gray);
+}
+
+
+/* Pill */
+
+.org-badge-pill {
+    border-radius: var(--org-radius-pill);
+}
+
+
+/* Icon */
+
+.org-badge-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    width: 1em;
+    height: 1em;
+}
+
+
+/* Counter */
+
+.org-badge-counter {
+    gap: var(--org-space-2);
+}
+
+.org-badge-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 1.15rem;
+    height: 1.15rem;
+
+    padding-inline: .3rem;
+
+    background: currentColor;
+    border-radius: var(--org-radius-pill);
+}
+
+.org-badge-count > span {
+    color: var(--org-white);
+    font-size: .65rem;
+    line-height: 1;
+}
+
+
+/* Filled */
+
+.org-badge-filled.org-badge-primary {
+    background: var(--org-primary);
+    color: var(--org-white);
+}
+
+.org-badge-filled.org-badge-success {
+    background: var(--org-success);
+    color: var(--org-white);
+}
+
+.org-badge-filled.org-badge-info {
+    background: var(--org-info);
+    color: var(--org-white);
+}
+
+.org-badge-filled.org-badge-warning {
+    background: var(--org-warning);
+    color: var(--org-dark);
+}
+
+.org-badge-filled.org-badge-danger {
+    background: var(--org-danger);
+    color: var(--org-white);
+}
+
+
+/* Dot */
+
+.org-badge-dot::before {
+    content: "";
+
+    width: .4rem;
+    height: .4rem;
+
+    background: currentColor;
+    border-radius: 50%;
+}
+
+
+/* Sizes */
+
+.org-badge-sm {
+    min-height: 1.25rem;
+    padding: .15rem .4rem;
+    font-size: .6875rem;
+}
+
+.org-badge-lg {
+    min-height: 1.75rem;
+    padding: .35rem .7rem;
+    font-size: var(--org-font-size-sm);
+}
