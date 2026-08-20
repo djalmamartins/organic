@@ -1,0 +1,166 @@
+/**
+ * Organic UI v2
+ * Avatar
+ */
+
+.org-avatar {
+    --org-avatar-size: 2.5rem;
+
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 var(--org-avatar-size);
+
+    width: var(--org-avatar-size);
+    height: var(--org-avatar-size);
+
+    overflow: visible;
+
+    background-color: var(--org-light);
+    color: var(--org-text);
+
+    border-radius: var(--org-radius-pill);
+
+    font-size: var(--org-font-size-sm);
+    font-weight: var(--org-font-weight-semibold);
+
+    vertical-align: middle;
+}
+
+
+/* Image */
+
+.org-avatar-img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: inherit;
+}
+
+
+/* Initials */
+
+.org-avatar-initials {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: color-mix(
+            in srgb,
+            var(--org-primary) 14%,
+            var(--org-white)
+    );
+
+    color: var(--org-primary-dark);
+
+    border-radius: inherit;
+}
+
+
+/* Sizes */
+
+.org-avatar-xs {
+    --org-avatar-size: 1.75rem;
+
+    font-size: .625rem;
+}
+
+.org-avatar-sm {
+    --org-avatar-size: 2rem;
+
+    font-size: var(--org-font-size-xs);
+}
+
+.org-avatar-lg {
+    --org-avatar-size: 3rem;
+
+    font-size: var(--org-font-size);
+}
+
+.org-avatar-xl {
+    --org-avatar-size: 4rem;
+
+    font-size: var(--org-font-size-lg);
+}
+
+
+/* Square */
+
+.org-avatar-square {
+    border-radius: var(--org-radius);
+}
+
+
+/* Status */
+
+.org-avatar-status {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 25%;
+    min-width: .6rem;
+
+    aspect-ratio: 1;
+
+    background-color: var(--org-gray);
+
+    border: 2px solid var(--org-bg);
+    border-radius: var(--org-radius-pill);
+}
+
+
+/* Status variants */
+
+.org-avatar-online {
+    background-color: var(--org-success);
+}
+
+.org-avatar-away {
+    background-color: var(--org-warning);
+}
+
+.org-avatar-busy {
+    background-color: var(--org-danger);
+}
+
+.org-avatar-offline {
+    background-color: var(--org-gray);
+}
+
+
+/* Group */
+
+.org-avatar-group {
+    display: flex;
+    align-items: center;
+}
+
+.org-avatar-group .org-avatar {
+    margin-left: -.6rem;
+
+    border: 2px solid var(--org-bg);
+}
+
+.org-avatar-group .org-avatar:first-child {
+    margin-left: 0;
+}
+
+
+/* Counter */
+
+.org-avatar-more {
+    background-color: var(--org-light);
+    color: var(--org-text-muted);
+}
