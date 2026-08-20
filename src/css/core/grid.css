@@ -73,33 +73,3 @@
 .org-row-span-2 {
     grid-row: span 2;
 }
-
-/* Gap */
-
-.org-gap-0 {
-    gap: var(--org-space-0);
-}
-
-.org-gap-1 {
-    gap: var(--org-space-1);
-}
-
-.org-gap-2 {
-    gap: var(--org-space-2);
-}
-
-.org-gap-3 {
-    gap: var(--org-space-3);
-}
-
-.org-gap-4 {
-    gap: var(--org-space-4);
-}
-
-.org-gap-6 {
-    gap: var(--org-space-6);
-}
-
-.org-gap-8 {
-    gap: var(--org-space-8);
-}

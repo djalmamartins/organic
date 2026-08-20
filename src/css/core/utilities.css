@@ -1,0 +1,221 @@
+/**
+ * Organic UI v2
+ * Utilities
+ */
+
+/* ==========================================================
+   Display
+   ========================================================== */
+
+.org-block {
+    display: block;
+}
+
+.org-inline {
+    display: inline;
+}
+
+.org-inline-block {
+    display: inline-block;
+}
+
+.org-flex {
+    display: flex;
+}
+
+.org-inline-flex {
+    display: inline-flex;
+}
+
+.org-hidden {
+    display: none !important;
+}
+
+
+/* ==========================================================
+   Flex
+   ========================================================== */
+
+.org-flex-row {
+    flex-direction: row;
+}
+
+.org-flex-column {
+    flex-direction: column;
+}
+
+.org-flex-wrap {
+    flex-wrap: wrap;
+}
+
+.org-items-start {
+    align-items: flex-start;
+}
+
+.org-items-center {
+    align-items: center;
+}
+
+.org-items-end {
+    align-items: flex-end;
+}
+
+.org-justify-start {
+    justify-content: flex-start;
+}
+
+.org-justify-center {
+    justify-content: center;
+}
+
+.org-justify-end {
+    justify-content: flex-end;
+}
+
+.org-justify-between {
+    justify-content: space-between;
+}
+
+
+/* ==========================================================
+   Gap
+   ========================================================== */
+
+.org-gap-1 {
+    gap: var(--org-space-1);
+}
+
+.org-gap-2 {
+    gap: var(--org-space-2);
+}
+
+.org-gap-3 {
+    gap: var(--org-space-3);
+}
+
+.org-gap-4 {
+    gap: var(--org-space-4);
+}
+
+.org-gap-6 {
+    gap: var(--org-space-6);
+}
+
+.org-gap-8 {
+    gap: var(--org-space-8);
+}
+
+
+/* ==========================================================
+   Text alignment
+   ========================================================== */
+
+.org-text-left {
+    text-align: left;
+}
+
+.org-text-center {
+    text-align: center;
+}
+
+.org-text-right {
+    text-align: right;
+}
+
+
+/* ==========================================================
+   Width
+   ========================================================== */
+
+.org-w-full {
+    width: 100%;
+}
+
+.org-w-auto {
+    width: auto;
+}
+
+
+/* ==========================================================
+   Height
+   ========================================================== */
+
+.org-h-full {
+    height: 100%;
+}
+
+
+/* ==========================================================
+   Margin
+   ========================================================== */
+
+.org-m-0 {
+    margin: 0;
+}
+
+.org-m-auto {
+    margin: auto;
+}
+
+.org-mx-auto {
+    margin-inline: auto;
+}
+
+
+/* ==========================================================
+   Position
+   ========================================================== */
+
+.org-relative {
+    position: relative;
+}
+
+.org-absolute {
+    position: absolute;
+}
+
+.org-fixed {
+    position: fixed;
+}
+
+.org-sticky {
+    position: sticky;
+}
+
+
+/* ==========================================================
+   Overflow
+   ========================================================== */
+
+.org-overflow-hidden {
+    overflow: hidden;
+}
+
+.org-overflow-auto {
+    overflow: auto;
+}
+
+
+/* ==========================================================
+   Border radius
+   ========================================================== */
+
+.org-rounded-sm {
+    border-radius: var(--org-radius-sm);
+}
+
+.org-rounded {
+    border-radius: var(--org-radius);
+}
+
+.org-rounded-lg {
+    border-radius: var(--org-radius-lg);
+}
+
+.org-rounded-xl {
+    border-radius: var(--org-radius-xl);
+}
+
+.org-rounded-pill {
+    border-radius: var(--org-radius-pill);
+}
