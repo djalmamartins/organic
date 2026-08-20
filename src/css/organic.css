@@ -11,3 +11,6 @@
 @import "./core/grid.css";
 @import "./core/accessibility.css";
 @import "./core/utilities.css";
+
+/* Components */
+@import "./components/button.css";

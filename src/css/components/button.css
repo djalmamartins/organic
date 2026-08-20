@@ -1,0 +1,131 @@
+/**
+ * Organic UI v2
+ * Button
+ */
+
+.org-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--org-space-2);
+
+    min-height: 2.5rem;
+    padding: var(--org-space-2) var(--org-space-4);
+
+    border: 1px solid transparent;
+    border-radius: var(--org-radius);
+
+    font: inherit;
+    font-weight: var(--org-font-weight-medium);
+    line-height: 1;
+
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+            background-color var(--org-transition-fast),
+            border-color var(--org-transition-fast),
+            color var(--org-transition-fast),
+            box-shadow var(--org-transition-fast),
+            transform var(--org-transition-fast);
+}
+
+
+/* Primary */
+
+.org-btn-primary {
+    background-color: var(--org-primary);
+    border-color: var(--org-primary);
+    color: var(--org-white);
+}
+
+.org-btn-primary:hover {
+    background-color: var(--org-primary-dark);
+    border-color: var(--org-primary-dark);
+}
+
+
+/* Secondary */
+
+.org-btn-secondary {
+    background-color: var(--org-dark);
+    border-color: var(--org-dark);
+    color: var(--org-white);
+}
+
+
+/* Light */
+
+.org-btn-light {
+    background-color: var(--org-light);
+    border-color: var(--org-border);
+    color: var(--org-text);
+}
+
+
+/* Outline */
+
+.org-btn-outline {
+    background-color: transparent;
+    border-color: var(--org-primary);
+    color: var(--org-primary);
+}
+
+.org-btn-outline:hover {
+    background-color: var(--org-primary);
+    color: var(--org-white);
+}
+
+
+/* Sizes */
+
+.org-btn-sm {
+    min-height: 2rem;
+    padding: var(--org-space-1) var(--org-space-3);
+    font-size: var(--org-font-size-sm);
+}
+
+.org-btn-lg {
+    min-height: 3rem;
+    padding: var(--org-space-3) var(--org-space-6);
+    font-size: var(--org-font-size-lg);
+}
+
+
+/* Block */
+
+.org-btn-block {
+    width: 100%;
+}
+
+
+/* Disabled */
+
+.org-btn:disabled,
+.org-btn[aria-disabled="true"] {
+    opacity: .55;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
+/* Active */
+
+.org-btn:active:not(:disabled) {
+    transform: translateY(1px);
+}
+
+
+/* Focus */
+
+.org-btn:focus-visible {
+    outline: 3px solid color-mix(
+            in srgb,
+            var(--org-primary) 35%,
+            transparent
+    );
+    outline-offset: 2px;
+}
