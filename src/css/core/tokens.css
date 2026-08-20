@@ -1,0 +1,104 @@
+/**
+ * Organic UI v2
+ * Design Tokens
+ */
+
+:root {
+    /* Brand */
+    --org-primary: #4caf50;
+    --org-primary-dark: #2e7d32;
+
+    /* Neutral */
+    --org-dark: #111418;
+    --org-gray: #6b7280;
+    --org-light: #f3f4f6;
+    --org-white: #ffffff;
+    --org-black: #000000;
+
+    /* Semantic */
+    --org-success: #4caf50;
+    --org-warning: #f59e0b;
+    --org-danger: #dc3545;
+    --org-info: #0ea5e9;
+
+    /* Interface */
+    --org-bg: #ffffff;
+    --org-surface: #f3f4f6;
+
+    --org-text: #111418;
+    --org-text-muted: #6b7280;
+    --org-text-inverse: #ffffff;
+
+    --org-border: #e5e7eb;
+
+    /* Typography */
+    --org-font-family:
+            system-ui,
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            sans-serif;
+
+    --org-font-size-xs: .75rem;
+    --org-font-size-sm: .875rem;
+    --org-font-size: 1rem;
+    --org-font-size-lg: 1.125rem;
+    --org-font-size-xl: 1.25rem;
+    --org-font-size-2xl: 1.5rem;
+    --org-font-size-3xl: 1.875rem;
+    --org-font-size-4xl: 2.25rem;
+
+    --org-font-weight: 400;
+    --org-font-weight-medium: 500;
+    --org-font-weight-semibold: 600;
+    --org-font-weight-bold: 700;
+
+    --org-line-height-sm: 1.25;
+    --org-line-height: 1.5;
+    --org-line-height-lg: 1.75;
+
+    /* Spacing */
+    --org-space-0: 0;
+    --org-space-1: .25rem;
+    --org-space-2: .5rem;
+    --org-space-3: .75rem;
+    --org-space-4: 1rem;
+    --org-space-5: 1.25rem;
+    --org-space-6: 1.5rem;
+    --org-space-8: 2rem;
+    --org-space-10: 2.5rem;
+    --org-space-12: 3rem;
+    --org-space-16: 4rem;
+
+    /* Radius */
+    --org-radius-sm: .25rem;
+    --org-radius: .5rem;
+    --org-radius-lg: .75rem;
+    --org-radius-xl: 1rem;
+    --org-radius-pill: 9999px;
+
+    /* Shadows */
+    --org-shadow-sm: 0 1px 2px rgb(0 0 0 / 5%);
+    --org-shadow: 0 4px 12px rgb(0 0 0 / 8%);
+    --org-shadow-lg: 0 12px 32px rgb(0 0 0 / 12%);
+
+    /* Container */
+    --org-container-sm: 540px;
+    --org-container-md: 720px;
+    --org-container-lg: 960px;
+    --org-container-xl: 1140px;
+    --org-container-xxl: 1320px;
+
+    /* Motion */
+    --org-transition-fast: 150ms ease;
+    --org-transition: 250ms ease;
+    --org-transition-slow: 400ms ease;
+
+    /* Layer */
+    --org-z-dropdown: 1000;
+    --org-z-sticky: 1020;
+    --org-z-fixed: 1030;
+    --org-z-overlay: 1040;
+    --org-z-modal: 1050;
+    --org-z-tooltip: 1060;
+}
