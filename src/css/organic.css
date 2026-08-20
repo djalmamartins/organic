@@ -24,3 +24,6 @@
 @import "./components/breadcrumb.css";
 @import "./components/loader.css";
 @import "./components/tooltip.css";
+@import "./components/modal.css";
+@import "./components/dropdown.css";
+@import "./components/tabs.css";

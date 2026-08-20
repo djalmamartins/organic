@@ -44,6 +44,511 @@
             Playground de desenvolvimento e testes.
         </p>
     </header>
+
+    <hr>
+
+    <hr>
+
+    <hr>
+
+    <hr>
+
+    <hr>
+    <section>
+
+        <h2>Tabs</h2>
+
+        <div
+                class="org-tabs"
+                data-org-tabs
+        >
+
+            <div
+                    class="org-tabs-nav"
+                    role="tablist"
+            >
+
+                <button
+                        class="org-tab is-active"
+                        type="button"
+                        role="tab"
+                        data-org-tab="overview"
+                        aria-selected="true"
+                >
+                    Visão geral
+                </button>
+
+                <button
+                        class="org-tab"
+                        type="button"
+                        role="tab"
+                        data-org-tab="profile"
+                        aria-selected="false"
+                >
+                    Perfil
+                </button>
+
+                <button
+                        class="org-tab"
+                        type="button"
+                        role="tab"
+                        data-org-tab="settings"
+                        aria-selected="false"
+                >
+                    Configurações
+                </button>
+
+            </div>
+
+
+            <div class="org-tab-content">
+
+                <div
+                        class="org-tab-panel"
+                        data-org-tab-panel="overview"
+                        role="tabpanel"
+                >
+
+                    <h3>Visão geral</h3>
+
+                    <p>
+                        Conteúdo da visão geral.
+                    </p>
+
+                </div>
+
+
+                <div
+                        class="org-tab-panel"
+                        data-org-tab-panel="profile"
+                        role="tabpanel"
+                        hidden
+                >
+
+                    <h3>Perfil</h3>
+
+                    <p>
+                        Conteúdo do perfil do usuário.
+                    </p>
+
+                </div>
+
+
+                <div
+                        class="org-tab-panel"
+                        data-org-tab-panel="settings"
+                        role="tabpanel"
+                        hidden
+                >
+
+                    <h3>Configurações</h3>
+
+                    <p>
+                        Conteúdo das configurações.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <hr>
+    <section>
+        <h2>Dropdown</h2>
+
+        <div class="preview">
+
+            <div class="org-dropdown" data-org-dropdown>
+
+                <button
+                        class="org-btn org-btn-light"
+                        type="button"
+                        data-org-dropdown-toggle
+                        aria-expanded="false"
+                >
+                    Ações
+                    <span aria-hidden="true">⌄</span>
+                </button>
+
+                <div class="org-dropdown-menu">
+
+                    <div class="org-dropdown-header">
+                        Opções
+                    </div>
+
+                    <a
+                            class="org-dropdown-item"
+                            href="#"
+                    >
+                        Visualizar
+                    </a>
+
+                    <a
+                            class="org-dropdown-item"
+                            href="#"
+                    >
+                        Editar
+                    </a>
+
+                    <button
+                            class="org-dropdown-item"
+                            type="button"
+                    >
+                        Duplicar
+                    </button>
+
+                    <div class="org-dropdown-divider"></div>
+
+                    <button
+                            class="org-dropdown-item org-dropdown-item-danger"
+                            type="button"
+                    >
+                        Excluir
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div
+                    class="org-dropdown org-dropdown-end"
+                    data-org-dropdown
+            >
+
+                <button
+                        class="org-btn org-btn-primary"
+                        type="button"
+                        data-org-dropdown-toggle
+                        aria-expanded="false"
+                >
+                    Menu alinhado à direita
+                </button>
+
+                <div class="org-dropdown-menu">
+
+                    <button class="org-dropdown-item is-active">
+                        Dashboard
+                    </button>
+
+                    <button class="org-dropdown-item">
+                        Usuários
+                    </button>
+
+                    <button class="org-dropdown-item">
+                        Configurações
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <hr>
+    <button
+            class="org-btn org-btn-primary"
+            type="button"
+            data-org-modal-open="test-modal"
+    >
+        Abrir modal
+    </button>
+
+    <div
+            class="org-modal"
+            id="test-modal"
+            data-org-modal
+            aria-hidden="true"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="test-modal-title"
+    >
+        <div class="org-modal-backdrop"></div>
+
+        <div class="org-modal-dialog">
+
+            <header class="org-modal-header">
+
+                <h3
+                        class="org-modal-title"
+                        id="test-modal-title"
+                >
+                    Teste do modal
+                </h3>
+
+                <button
+                        class="org-modal-close"
+                        type="button"
+                        data-org-modal-close
+                        aria-label="Fechar"
+                >
+                    ×
+                </button>
+
+            </header>
+
+            <div class="org-modal-body">
+                <p>Se você está vendo isso, o modal está funcionando.</p>
+            </div>
+
+            <footer class="org-modal-footer">
+
+                <button
+                        class="org-btn org-btn-light"
+                        type="button"
+                        data-org-modal-close
+                >
+                    Cancelar
+                </button>
+
+                <button
+                        class="org-btn org-btn-primary"
+                        type="button"
+                >
+                    Confirmar
+                </button>
+
+            </footer>
+
+        </div>
+    </div>
+    <hr>
+    <div class="org-modal-body">
+
+        <div class="org-form-group">
+            <label class="org-label" for="new-name">
+                Nome
+            </label>
+
+            <input
+                    class="org-input"
+                    id="new-name"
+                    type="text"
+            >
+        </div>
+
+        <div class="org-form-group">
+            <label class="org-label" for="new-email">
+                E-mail
+            </label>
+
+            <input
+                    class="org-input"
+                    id="new-email"
+                    type="email"
+            >
+        </div>
+
+    </div>
+    <hr>
+    <div
+            class="org-modal org-modal-alert"
+            id="modal-alert"
+            data-org-modal
+            aria-hidden="true"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-alert-title"
+    >
+        <div class="org-modal-backdrop"></div>
+
+        <div class="org-modal-dialog">
+
+            <div class="org-modal-body">
+
+                <div class="org-modal-icon org-modal-icon-info">
+                    i
+                </div>
+
+                <h3
+                        class="org-modal-title"
+                        id="modal-alert-title"
+                >
+                    Informação importante
+                </h3>
+
+                <p>
+                    Esta é uma mensagem informativa
+                    apresentada em formato modal.
+                </p>
+
+            </div>
+
+            <footer class="org-modal-footer">
+
+                <button
+                        class="org-btn org-btn-primary"
+                        data-org-modal-close
+                >
+                    Entendi
+                </button>
+
+            </footer>
+
+        </div>
+    </div>
+    <hr>
+    <button
+            class="org-btn org-btn-outline"
+            type="button"
+            data-org-modal-open="modal-confirm"
+    >
+        Abrir confirmação
+    </button>
+
+    <div
+            class="org-modal org-modal-confirm"
+            id="modal-confirm"
+            data-org-modal
+            aria-hidden="true"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-confirm-title"
+    >
+        <div class="org-modal-backdrop"></div>
+
+        <div class="org-modal-dialog">
+
+            <div class="org-modal-body">
+
+                <div class="org-modal-icon org-modal-icon-danger">
+                    !
+                </div>
+
+                <h3
+                        class="org-modal-title"
+                        id="modal-confirm-title"
+                >
+                    Confirmar exclusão
+                </h3>
+
+                <p>
+                    Tem certeza que deseja excluir este item?
+                    Esta ação não pode ser desfeita.
+                </p>
+
+            </div>
+
+            <footer class="org-modal-footer">
+
+                <button
+                        class="org-btn org-btn-light"
+                        data-org-modal-close
+                >
+                    Cancelar
+                </button>
+
+                <button class="org-btn org-btn-primary">
+                    Excluir
+                </button>
+
+            </footer>
+
+        </div>
+    </div>
+    <hr>
+    <section>
+        <h2>Modal</h2>
+
+        <div class="preview">
+
+            <button
+                    class="org-btn org-btn-primary"
+                    type="button"
+                    data-org-modal-open="example-modal"
+            >
+                Abrir modal
+            </button>
+
+        </div>
+
+
+        <div
+                class="org-modal"
+                id="example-modal"
+                data-org-modal
+                aria-hidden="true"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="example-modal-title"
+        >
+
+            <div class="org-modal-backdrop"></div>
+
+            <div class="org-modal-dialog">
+
+                <header class="org-modal-header">
+
+                    <h3
+                            class="org-modal-title"
+                            id="example-modal-title"
+                    >
+                        Exemplo de modal
+                    </h3>
+
+                    <button
+                            class="org-modal-close"
+                            type="button"
+                            data-org-modal-close
+                            aria-label="Fechar modal"
+                    >
+                        ×
+                    </button>
+
+                </header>
+
+
+                <div class="org-modal-body">
+
+                    <p>
+                        Este é o primeiro componente JavaScript
+                        da Organic UI v2.
+                    </p>
+
+                    <div class="org-form-group">
+                        <label
+                                class="org-label"
+                                for="modal-name"
+                        >
+                            Nome
+                        </label>
+
+                        <input
+                                class="org-input"
+                                id="modal-name"
+                                type="text"
+                        >
+                    </div>
+
+                </div>
+
+
+                <footer class="org-modal-footer">
+
+                    <button
+                            class="org-btn org-btn-light"
+                            type="button"
+                            data-org-modal-close
+                    >
+                        Cancelar
+                    </button>
+
+                    <button
+                            class="org-btn org-btn-primary"
+                            type="button"
+                    >
+                        Salvar
+                    </button>
+
+                </footer>
+
+            </div>
+
+        </div>
+
+    </section>
     <hr>
     <section>
         <h2>Pagination</h2>
@@ -2637,6 +3142,6 @@
     </section>
 
 </main>
-
+<script type="module" src="../src/js/organic.js"></script>
 </body>
 </html>

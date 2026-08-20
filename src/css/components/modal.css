@@ -1,0 +1,368 @@
+/**
+ * Organic UI v2
+ * Modal
+ */
+
+/* ==========================================================
+   Base
+   ========================================================== */
+
+.org-modal {
+    position: fixed;
+    inset: 0;
+    z-index: var(--org-z-modal);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: var(--org-space-4);
+}
+
+.org-modal.is-open {
+    display: flex;
+}
+
+
+/* ==========================================================
+   Backdrop
+   ========================================================== */
+
+.org-modal-backdrop {
+    position: absolute;
+    inset: 0;
+
+    background: rgb(17 20 24 / 60%);
+}
+
+
+/* ==========================================================
+   Dialog
+   ========================================================== */
+
+.org-modal-dialog {
+    position: relative;
+    z-index: 1;
+
+    width: min(100%, 32rem);
+    max-height: calc(100vh - 2rem);
+
+    overflow: hidden;
+
+    background: var(--org-bg);
+    color: var(--org-text);
+
+    border: 1px solid var(--org-border);
+    border-radius: var(--org-radius-lg);
+
+    box-shadow: var(--org-shadow-lg);
+}
+
+
+/* ==========================================================
+   Sizes
+   ========================================================== */
+
+.org-modal-sm .org-modal-dialog {
+    width: min(100%, 24rem);
+}
+
+.org-modal-lg .org-modal-dialog {
+    width: min(100%, 48rem);
+}
+
+.org-modal-xl .org-modal-dialog {
+    width: min(100%, 64rem);
+}
+
+
+/* ==========================================================
+   Header
+   ========================================================== */
+
+.org-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--org-space-4);
+
+    padding: var(--org-space-4) var(--org-space-5);
+
+    border-bottom: 1px solid var(--org-border);
+}
+
+.org-modal-title {
+    margin: 0;
+
+    color: var(--org-text);
+    font-size: var(--org-font-size-xl);
+    font-weight: var(--org-font-weight-semibold);
+}
+
+
+/* ==========================================================
+   Close
+   ========================================================== */
+
+.org-modal-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    width: 2rem;
+    height: 2rem;
+
+    padding: 0;
+
+    background: transparent;
+    color: var(--org-text-muted);
+
+    border: 0;
+    border-radius: var(--org-radius);
+
+    font-size: 1.4rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+            background-color var(--org-transition-fast),
+            color var(--org-transition-fast);
+}
+
+.org-modal-close:hover {
+    background: var(--org-light);
+    color: var(--org-text);
+}
+
+
+/* ==========================================================
+   Body
+   ========================================================== */
+
+.org-modal-body {
+    padding: var(--org-space-5);
+    overflow-y: auto;
+}
+
+
+/* ==========================================================
+   Footer
+   ========================================================== */
+
+.org-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--org-space-2);
+
+    padding: var(--org-space-4) var(--org-space-5);
+
+    border-top: 1px solid var(--org-border);
+}
+
+
+/* ==========================================================
+   Confirmation / Alert
+   ========================================================== */
+
+.org-modal-confirm .org-modal-dialog,
+.org-modal-alert .org-modal-dialog {
+    width: min(100%, 28rem);
+}
+
+.org-modal-confirm .org-modal-body,
+.org-modal-alert .org-modal-body {
+    text-align: center;
+}
+
+
+/* ==========================================================
+   Icons
+   ========================================================== */
+
+.org-modal-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 3rem;
+    height: 3rem;
+
+    margin: 0 auto var(--org-space-4);
+
+    border-radius: var(--org-radius-pill);
+
+    font-size: var(--org-font-size-xl);
+    font-weight: var(--org-font-weight-bold);
+}
+
+.org-modal-icon-success {
+    background: color-mix(
+            in srgb,
+            var(--org-success) 12%,
+            var(--org-white)
+    );
+
+    color: var(--org-success);
+}
+
+.org-modal-icon-info {
+    background: color-mix(
+            in srgb,
+            var(--org-info) 12%,
+            var(--org-white)
+    );
+
+    color: var(--org-info);
+}
+
+.org-modal-icon-warning {
+    background: color-mix(
+            in srgb,
+            var(--org-warning) 15%,
+            var(--org-white)
+    );
+
+    color: var(--org-warning);
+}
+
+.org-modal-icon-danger {
+    background: color-mix(
+            in srgb,
+            var(--org-danger) 12%,
+            var(--org-white)
+    );
+
+    color: var(--org-danger);
+}
+
+
+/* ==========================================================
+   Scroll
+   ========================================================== */
+
+.org-modal-scroll .org-modal-dialog {
+    display: flex;
+    flex-direction: column;
+
+    max-height: calc(100vh - 4rem);
+}
+
+.org-modal-scroll .org-modal-body {
+    flex: 1 1 auto;
+    overflow-y: auto;
+}
+
+
+/* ==========================================================
+   Fullscreen
+   ========================================================== */
+
+.org-modal-fullscreen {
+    padding: 0;
+}
+
+.org-modal-fullscreen .org-modal-dialog {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+
+    border: 0;
+    border-radius: 0;
+}
+
+.org-modal-fullscreen .org-modal-body {
+    height: 100%;
+    overflow-y: auto;
+}
+
+
+/* ==========================================================
+   Media
+   ========================================================== */
+
+.org-modal-media .org-modal-body {
+    padding: 0;
+}
+
+.org-modal-image,
+.org-modal-video {
+    display: block;
+
+    width: 100%;
+    max-height: 80vh;
+
+    object-fit: contain;
+
+    background: var(--org-dark);
+}
+
+.org-modal-media-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: var(--org-space-2) var(--org-space-3);
+
+    border-top: 1px solid var(--org-border);
+
+    font-size: var(--org-font-size-sm);
+}
+
+
+/* ==========================================================
+   Animation
+   ========================================================== */
+
+.org-modal.is-open .org-modal-dialog {
+    animation: org-modal-in var(--org-transition-fast);
+}
+
+@keyframes org-modal-in {
+    from {
+        opacity: 0;
+        transform: translateY(.5rem) scale(.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* ==========================================================
+   Mobile
+   ========================================================== */
+
+@media (max-width: 575px) {
+    .org-modal:not(.org-modal-fullscreen) {
+        align-items: flex-end;
+        padding: 0;
+    }
+
+    .org-modal:not(.org-modal-fullscreen) .org-modal-dialog {
+        width: 100%;
+        max-height: 90vh;
+
+        border-radius:
+                var(--org-radius-lg)
+                var(--org-radius-lg)
+                0
+                0;
+    }
+}
+
+
+/* ==========================================================
+   Reduced motion
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .org-modal.is-open .org-modal-dialog {
+        animation: none;
+    }
+}

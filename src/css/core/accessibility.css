@@ -5,21 +5,7 @@
 
 /* Screen reader only */
 
-.sr-only {
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    padding: 0 !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    clip: rect(0, 0, 0, 0) !important;
-    white-space: nowrap !important;
-    border: 0 !important;
-}
-
-/* Restore visually hidden content when focused */
-
-.sr-only-focusable:not(:focus):not(:focus-within) {
+.org-sr-only {
     position: absolute !important;
     width: 1px !important;
     height: 1px !important;
@@ -38,10 +24,26 @@
     outline-offset: 3px;
 }
 
-/* Remove mouse focus ring when not needed */
+/* Skip link */
 
-:focus:not(:focus-visible) {
-    outline: none;
+.org-skip-link {
+    position: fixed;
+    top: var(--org-space-2);
+    left: var(--org-space-2);
+    z-index: var(--org-z-tooltip);
+
+    padding: var(--org-space-2) var(--org-space-4);
+
+    background: var(--org-primary);
+    color: var(--org-white);
+
+    border-radius: var(--org-radius);
+
+    transform: translateY(-200%);
+}
+
+.org-skip-link:focus {
+    transform: translateY(0);
 }
 
 /* Reduced motion */
@@ -55,22 +57,4 @@
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
     }
-}
-
-/* Skip link */
-
-.org-skip-link {
-    position: fixed;
-    top: var(--org-space-2);
-    left: var(--org-space-2);
-    z-index: var(--org-z-tooltip);
-    padding: var(--org-space-2) var(--org-space-4);
-    background: var(--org-primary);
-    color: var(--org-white);
-    border-radius: var(--org-radius);
-    transform: translateY(-200%);
-}
-
-.org-skip-link:focus {
-    transform: translateY(0);
 }

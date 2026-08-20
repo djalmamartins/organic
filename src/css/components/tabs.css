@@ -1,0 +1,147 @@
+/**
+ * Organic UI v2
+ * Tabs
+ */
+
+/* ==========================================================
+   Base
+   ========================================================== */
+
+.org-tabs {
+    width: 100%;
+}
+
+
+/* ==========================================================
+   Navigation
+   ========================================================== */
+
+.org-tabs-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--org-space-4);
+
+    margin: 0;
+    padding: 0;
+
+    overflow-x: auto;
+
+    border-bottom: 1px solid var(--org-border);
+
+    list-style: none;
+
+    scrollbar-width: none;
+}
+
+.org-tabs-nav::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* ==========================================================
+   Tab
+   ========================================================== */
+
+.org-tab {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    padding: var(--org-space-3) 0;
+
+    background: transparent;
+    color: var(--org-text-muted);
+
+    border: 0;
+
+    font: inherit;
+    font-size: var(--org-font-size-sm);
+    font-weight: var(--org-font-weight-medium);
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition: color var(--org-transition-fast);
+}
+
+
+/* ==========================================================
+   Hover
+   ========================================================== */
+
+.org-tab:hover {
+    color: var(--org-primary);
+}
+
+
+/* ==========================================================
+   Active
+   ========================================================== */
+
+.org-tab.is-active,
+.org-tab[aria-selected="true"] {
+    color: var(--org-primary);
+}
+
+.org-tab.is-active::after,
+.org-tab[aria-selected="true"]::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    bottom: -1px;
+    left: 0;
+
+    height: 2px;
+
+    background: var(--org-primary);
+
+    border-radius: var(--org-radius-pill);
+}
+
+
+/* ==========================================================
+   Disabled
+   ========================================================== */
+
+.org-tab:disabled {
+    opacity: .45;
+
+    cursor: not-allowed;
+}
+
+
+/* ==========================================================
+   Content
+   ========================================================== */
+
+.org-tab-content {
+    padding-top: var(--org-space-5);
+}
+
+.org-tab-panel {
+    display: block;
+}
+
+.org-tab-panel[hidden] {
+    display: none;
+}
+
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width: 575px) {
+
+    .org-tabs-nav {
+        gap: var(--org-space-3);
+    }
+
+}
