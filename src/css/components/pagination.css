@@ -1,0 +1,226 @@
+/**
+ * Organic UI v2
+ * Pagination
+ */
+
+.org-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--org-space-3);
+
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+/* ==========================================================
+   Navigation
+   ========================================================== */
+
+.org-pagination-list {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--org-space-1);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.org-pagination-item {
+    display: inline-flex;
+}
+
+
+/* ==========================================================
+   Link
+   ========================================================== */
+
+.org-pagination-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 2rem;
+    height: 2rem;
+
+    padding: 0 var(--org-space-2);
+
+    background: var(--org-bg);
+    color: var(--org-text);
+
+    border: 1px solid var(--org-border);
+    border-radius: var(--org-radius);
+
+    font-size: var(--org-font-size-sm);
+    font-weight: var(--org-font-weight-medium);
+    line-height: 1;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition:
+            background-color var(--org-transition-fast),
+            border-color var(--org-transition-fast),
+            color var(--org-transition-fast);
+}
+
+.org-pagination-link:hover {
+    background: var(--org-surface);
+    border-color: var(--org-primary);
+    color: var(--org-primary-dark);
+}
+
+
+/* ==========================================================
+   Active
+   ========================================================== */
+
+.org-pagination-link[aria-current="page"],
+.org-pagination-item.is-active .org-pagination-link {
+    background: var(--org-primary);
+    border-color: var(--org-primary);
+    color: var(--org-white);
+}
+
+
+/* ==========================================================
+   Disabled
+   ========================================================== */
+
+.org-pagination-link:disabled,
+.org-pagination-link[aria-disabled="true"],
+.org-pagination-item.is-disabled .org-pagination-link {
+    opacity: .45;
+
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   Ellipsis
+   ========================================================== */
+
+.org-pagination-ellipsis {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 2rem;
+    height: 2rem;
+
+    color: var(--org-text-muted);
+
+    font-size: var(--org-font-size-sm);
+}
+
+
+/* ==========================================================
+   Info
+   ========================================================== */
+
+.org-pagination-info {
+    color: var(--org-text-muted);
+
+    font-size: var(--org-font-size-sm);
+}
+
+.org-pagination-info strong {
+    color: var(--org-text);
+    font-weight: var(--org-font-weight-semibold);
+}
+
+
+/* ==========================================================
+   Per page
+   ========================================================== */
+
+.org-pagination-per-page {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--org-space-2);
+
+    color: var(--org-text-muted);
+
+    font-size: var(--org-font-size-sm);
+}
+
+.org-pagination-select {
+    min-width: 4.25rem;
+    height: 2rem;
+
+    padding: 0 var(--org-space-2);
+
+    background: var(--org-bg);
+    color: var(--org-text);
+
+    border: 1px solid var(--org-border);
+    border-radius: var(--org-radius);
+
+    font: inherit;
+}
+
+
+/* ==========================================================
+   Compact
+   ========================================================== */
+
+.org-pagination-compact .org-pagination-link {
+    min-width: 1.75rem;
+    height: 1.75rem;
+
+    padding-inline: var(--org-space-1);
+
+    font-size: var(--org-font-size-xs);
+}
+
+.org-pagination-compact .org-pagination-ellipsis {
+    min-width: 1.75rem;
+    height: 1.75rem;
+}
+
+
+/* ==========================================================
+   Large
+   ========================================================== */
+
+.org-pagination-lg .org-pagination-link {
+    min-width: 2.5rem;
+    height: 2.5rem;
+
+    font-size: var(--org-font-size);
+}
+
+
+/* ==========================================================
+   Alignment helpers
+   ========================================================== */
+
+.org-pagination-center {
+    justify-content: center;
+}
+
+.org-pagination-end {
+    justify-content: flex-end;
+}
+
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width: 575px) {
+    .org-pagination {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .org-pagination-list {
+        max-width: 100%;
+        overflow-x: auto;
+        padding-bottom: var(--org-space-1);
+    }
+}

@@ -20,3 +20,7 @@
 @import "./components/badge.css";
 @import "./components/avatar.css";
 @import "./components/table.css";
+@import "./components/pagination.css";
+@import "./components/breadcrumb.css";
+@import "./components/loader.css";
+@import "./components/tooltip.css";

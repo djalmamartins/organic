@@ -1,0 +1,288 @@
+/**
+ * Organic UI v2
+ * Tooltip
+ */
+
+[data-org-tooltip] {
+    position: relative;
+}
+
+/* Base */
+
+[data-org-tooltip]::before,
+[data-org-tooltip]::after {
+    position: absolute;
+    z-index: var(--org-z-tooltip);
+
+    pointer-events: none;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+            opacity var(--org-transition-fast),
+            transform var(--org-transition-fast),
+            visibility var(--org-transition-fast);
+}
+
+/* Content */
+
+[data-org-tooltip]::after {
+    content: attr(data-org-tooltip);
+
+    width: max-content;
+    max-width: 16rem;
+
+    padding: var(--org-space-2) var(--org-space-3);
+
+    background: var(--org-dark);
+    color: var(--org-white);
+
+    border-radius: var(--org-radius);
+
+    box-shadow: var(--org-shadow);
+
+    font-size: var(--org-font-size-xs);
+    font-weight: var(--org-font-weight-medium);
+    line-height: var(--org-line-height-sm);
+
+    text-align: center;
+    white-space: normal;
+}
+
+/* Arrow */
+
+[data-org-tooltip]::before {
+    content: "";
+
+    width: 0;
+    height: 0;
+
+    border: .35rem solid transparent;
+}
+
+/* Show */
+
+[data-org-tooltip]:hover::before,
+[data-org-tooltip]:hover::after,
+[data-org-tooltip]:focus-visible::before,
+[data-org-tooltip]:focus-visible::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ==========================================================
+   Top
+   ========================================================== */
+
+[data-org-tooltip-position="top"]::after,
+[data-org-tooltip]:not([data-org-tooltip-position])::after {
+    left: 50%;
+    bottom: calc(100% + .6rem);
+
+    transform: translate(-50%, .25rem);
+}
+
+[data-org-tooltip-position="top"]::before,
+[data-org-tooltip]:not([data-org-tooltip-position])::before {
+    left: 50%;
+    bottom: calc(100% + .05rem);
+
+    border-top-color: var(--org-dark);
+
+    transform: translateX(-50%);
+}
+
+[data-org-tooltip-position="top"]:hover::after,
+[data-org-tooltip-position="top"]:focus-visible::after,
+[data-org-tooltip]:not([data-org-tooltip-position]):hover::after,
+[data-org-tooltip]:not([data-org-tooltip-position]):focus-visible::after {
+    transform: translate(-50%, 0);
+}
+
+
+/* ==========================================================
+   Top start
+   ========================================================== */
+
+[data-org-tooltip-position="top-start"]::after {
+    left: 0;
+    bottom: calc(100% + .6rem);
+
+    transform: translateY(.25rem);
+}
+
+[data-org-tooltip-position="top-start"]::before {
+    left: var(--org-space-3);
+    bottom: calc(100% + .05rem);
+
+    border-top-color: var(--org-dark);
+}
+
+[data-org-tooltip-position="top-start"]:hover::after,
+[data-org-tooltip-position="top-start"]:focus-visible::after {
+    transform: translateY(0);
+}
+
+
+/* ==========================================================
+   Top end
+   ========================================================== */
+
+[data-org-tooltip-position="top-end"]::after {
+    right: 0;
+    bottom: calc(100% + .6rem);
+
+    transform: translateY(.25rem);
+}
+
+[data-org-tooltip-position="top-end"]::before {
+    right: var(--org-space-3);
+    bottom: calc(100% + .05rem);
+
+    border-top-color: var(--org-dark);
+}
+
+[data-org-tooltip-position="top-end"]:hover::after,
+[data-org-tooltip-position="top-end"]:focus-visible::after {
+    transform: translateY(0);
+}
+
+
+/* ==========================================================
+   Left
+   ========================================================== */
+
+[data-org-tooltip-position="left"]::after {
+    top: 50%;
+    right: calc(100% + .6rem);
+
+    transform: translate(.25rem, -50%);
+}
+
+[data-org-tooltip-position="left"]::before {
+    top: 50%;
+    right: calc(100% + .05rem);
+
+    border-left-color: var(--org-dark);
+
+    transform: translateY(-50%);
+}
+
+[data-org-tooltip-position="left"]:hover::after,
+[data-org-tooltip-position="left"]:focus-visible::after {
+    transform: translate(0, -50%);
+}
+
+
+/* ==========================================================
+   Right
+   ========================================================== */
+
+[data-org-tooltip-position="right"]::after {
+    top: 50%;
+    left: calc(100% + .6rem);
+
+    transform: translate(-.25rem, -50%);
+}
+
+[data-org-tooltip-position="right"]::before {
+    top: 50%;
+    left: calc(100% + .05rem);
+
+    border-right-color: var(--org-dark);
+
+    transform: translateY(-50%);
+}
+
+[data-org-tooltip-position="right"]:hover::after,
+[data-org-tooltip-position="right"]:focus-visible::after {
+    transform: translate(0, -50%);
+}
+
+
+/* ==========================================================
+   Bottom
+   ========================================================== */
+
+[data-org-tooltip-position="bottom"]::after {
+    left: 50%;
+    top: calc(100% + .6rem);
+
+    transform: translate(-50%, -.25rem);
+}
+
+[data-org-tooltip-position="bottom"]::before {
+    left: 50%;
+    top: calc(100% + .05rem);
+
+    border-bottom-color: var(--org-dark);
+
+    transform: translateX(-50%);
+}
+
+[data-org-tooltip-position="bottom"]:hover::after,
+[data-org-tooltip-position="bottom"]:focus-visible::after {
+    transform: translate(-50%, 0);
+}
+
+
+/* ==========================================================
+   Bottom start
+   ========================================================== */
+
+[data-org-tooltip-position="bottom-start"]::after {
+    left: 0;
+    top: calc(100% + .6rem);
+
+    transform: translateY(-.25rem);
+}
+
+[data-org-tooltip-position="bottom-start"]::before {
+    left: var(--org-space-3);
+    top: calc(100% + .05rem);
+
+    border-bottom-color: var(--org-dark);
+}
+
+[data-org-tooltip-position="bottom-start"]:hover::after,
+[data-org-tooltip-position="bottom-start"]:focus-visible::after {
+    transform: translateY(0);
+}
+
+
+/* ==========================================================
+   Bottom end
+   ========================================================== */
+
+[data-org-tooltip-position="bottom-end"]::after {
+    right: 0;
+    top: calc(100% + .6rem);
+
+    transform: translateY(-.25rem);
+}
+
+[data-org-tooltip-position="bottom-end"]::before {
+    right: var(--org-space-3);
+    top: calc(100% + .05rem);
+
+    border-bottom-color: var(--org-dark);
+}
+
+[data-org-tooltip-position="bottom-end"]:hover::after,
+[data-org-tooltip-position="bottom-end"]:focus-visible::after {
+    transform: translateY(0);
+}
+
+
+/* ==========================================================
+   Reduced motion
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    [data-org-tooltip]::before,
+    [data-org-tooltip]::after {
+        transition: none;
+    }
+}
