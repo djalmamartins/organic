@@ -1,0 +1,202 @@
+/**
+ * Organic UI v2
+ * Typography
+ */
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--org-text);
+    font-weight: var(--org-font-weight-bold);
+    line-height: var(--org-line-height-sm);
+}
+
+h1 {
+    font-size: var(--org-font-size-4xl);
+}
+
+h2 {
+    font-size: var(--org-font-size-3xl);
+}
+
+h3 {
+    font-size: var(--org-font-size-2xl);
+}
+
+h4 {
+    font-size: var(--org-font-size-xl);
+}
+
+h5 {
+    font-size: var(--org-font-size-lg);
+}
+
+h6 {
+    font-size: var(--org-font-size);
+}
+
+/* Paragraphs */
+
+p {
+    margin-bottom: var(--org-space-4);
+}
+
+/* Lead */
+
+.lead {
+    font-size: var(--org-font-size-lg);
+    color: var(--org-text-muted);
+    line-height: var(--org-line-height-lg);
+}
+
+/* Small text */
+
+small,
+.small {
+    font-size: var(--org-font-size-sm);
+}
+
+/* Strong */
+
+strong,
+b {
+    font-weight: var(--org-font-weight-bold);
+}
+
+/* Emphasis */
+
+em,
+i {
+    font-style: italic;
+}
+
+/* Mark */
+
+mark {
+    padding: .1em .25em;
+    background-color: var(--org-highlight);
+    color: var(--org-text);
+}
+
+/* Deleted / inserted */
+
+del {
+    text-decoration: line-through;
+}
+
+ins {
+    text-decoration: underline;
+}
+
+/* Abbreviation */
+
+abbr[title] {
+    cursor: help;
+    text-decoration: underline dotted;
+}
+
+/* Code */
+
+code,
+kbd,
+samp,
+pre {
+    font-family:
+            ui-monospace,
+            SFMono-Regular,
+            Menlo,
+            Monaco,
+            Consolas,
+            "Liberation Mono",
+            monospace;
+}
+
+code {
+    padding: .125rem .25rem;
+    background-color: var(--org-light);
+    border-radius: var(--org-radius-sm);
+    font-size: .875em;
+}
+
+pre {
+    display: block;
+    overflow-x: auto;
+    margin: 0 0 var(--org-space-4);
+    padding: var(--org-space-4);
+    background-color: var(--org-dark);
+    color: var(--org-light);
+    border-radius: var(--org-radius);
+}
+
+pre code {
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    border-radius: 0;
+}
+
+/* Blockquote */
+
+blockquote {
+    margin: 0 0 var(--org-space-4);
+    padding-left: var(--org-space-4);
+    border-left: 4px solid var(--org-primary);
+    color: var(--org-text-muted);
+}
+
+/* Lists */
+
+ul,
+ol {
+    margin-bottom: var(--org-space-4);
+    padding-left: var(--org-space-6);
+}
+
+li + li {
+    margin-top: var(--org-space-1);
+}
+
+/* Description lists */
+
+dl {
+    margin-bottom: var(--org-space-4);
+}
+
+dt {
+    font-weight: var(--org-font-weight-bold);
+}
+
+dd {
+    margin: 0 0 var(--org-space-2);
+}
+
+/* Text utilities */
+
+.text-muted {
+    color: var(--org-text-muted);
+}
+
+.text-primary {
+    color: var(--org-primary);
+}
+
+.text-success {
+    color: var(--org-success);
+}
+
+.text-warning {
+    color: var(--org-warning);
+}
+
+.text-danger {
+    color: var(--org-danger);
+}
+
+.text-info {
+    color: var(--org-info);
+}
