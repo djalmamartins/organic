@@ -1,0 +1,76 @@
+/**
+ * Organic UI v2
+ * Accessibility
+ */
+
+/* Screen reader only */
+
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Restore visually hidden content when focused */
+
+.sr-only-focusable:not(:focus):not(:focus-within) {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Focus */
+
+:focus-visible {
+    outline: 3px solid var(--org-primary);
+    outline-offset: 3px;
+}
+
+/* Remove mouse focus ring when not needed */
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+/* Skip link */
+
+.org-skip-link {
+    position: fixed;
+    top: var(--org-space-2);
+    left: var(--org-space-2);
+    z-index: var(--org-z-tooltip);
+    padding: var(--org-space-2) var(--org-space-4);
+    background: var(--org-primary);
+    color: var(--org-white);
+    border-radius: var(--org-radius);
+    transform: translateY(-200%);
+}
+
+.org-skip-link:focus {
+    transform: translateY(0);
+}

@@ -1,0 +1,105 @@
+/**
+ * Organic UI v2
+ * Grid
+ */
+
+/* Container */
+
+.org-container {
+    width: min(
+            100% - calc(var(--org-space-4) * 2),
+            var(--org-container-xl)
+    );
+    margin-inline: auto;
+}
+
+.org-container-fluid {
+    width: 100%;
+    padding-inline: var(--org-space-4);
+}
+
+/* Grid */
+
+.org-grid {
+    display: grid;
+    gap: var(--org-space-4);
+}
+
+.org-grid-auto {
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+
+.org-grid-1 {
+    grid-template-columns: 1fr;
+}
+
+.org-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.org-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.org-grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.org-grid-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.org-grid-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+/* Column span */
+
+.org-col-span-2 {
+    grid-column: span 2;
+}
+
+.org-col-span-3 {
+    grid-column: span 3;
+}
+
+.org-col-span-full {
+    grid-column: 1 / -1;
+}
+
+/* Row span */
+
+.org-row-span-2 {
+    grid-row: span 2;
+}
+
+/* Gap */
+
+.org-gap-0 {
+    gap: var(--org-space-0);
+}
+
+.org-gap-1 {
+    gap: var(--org-space-1);
+}
+
+.org-gap-2 {
+    gap: var(--org-space-2);
+}
+
+.org-gap-3 {
+    gap: var(--org-space-3);
+}
+
+.org-gap-4 {
+    gap: var(--org-space-4);
+}
+
+.org-gap-6 {
+    gap: var(--org-space-6);
+}
+
+.org-gap-8 {
+    gap: var(--org-space-8);
+}
