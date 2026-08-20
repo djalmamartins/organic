@@ -1,0 +1,134 @@
+/**
+ * Organic UI v2
+ * Card
+ */
+
+/* ==========================================================
+   Card
+   ========================================================== */
+
+.org-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    background-color: var(--org-bg);
+    color: var(--org-text);
+
+    border: 1px solid var(--org-border);
+    border-radius: var(--org-radius-lg);
+
+    overflow: hidden;
+}
+
+
+/* ==========================================================
+   Header
+   ========================================================== */
+
+.org-card-header {
+    padding: var(--org-space-4) var(--org-space-5);
+
+    border-bottom: 1px solid var(--org-border);
+}
+
+
+/* ==========================================================
+   Body
+   ========================================================== */
+
+.org-card-body {
+    flex: 1 1 auto;
+
+    padding: var(--org-space-5);
+}
+
+
+/* ==========================================================
+   Footer
+   ========================================================== */
+
+.org-card-footer {
+    padding: var(--org-space-4) var(--org-space-5);
+
+    border-top: 1px solid var(--org-border);
+}
+
+
+/* ==========================================================
+   Title
+   ========================================================== */
+
+.org-card-title {
+    margin: 0 0 var(--org-space-2);
+
+    font-size: var(--org-font-size-xl);
+    font-weight: var(--org-font-weight-semibold);
+}
+
+
+/* ==========================================================
+   Subtitle
+   ========================================================== */
+
+.org-card-subtitle {
+    margin: 0 0 var(--org-space-3);
+
+    color: var(--org-text-muted);
+    font-size: var(--org-font-size-sm);
+}
+
+
+/* ==========================================================
+   Text
+   ========================================================== */
+
+.org-card-text:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==========================================================
+   Image
+   ========================================================== */
+
+.org-card-img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+}
+
+
+/* ==========================================================
+   Variants
+   ========================================================== */
+
+.org-card-flat {
+    border-color: transparent;
+}
+
+.org-card-shadow {
+    border-color: transparent;
+    box-shadow: var(--org-shadow);
+}
+
+
+/* ==========================================================
+   Interactive
+   ========================================================== */
+
+.org-card-interactive {
+    transition:
+            transform var(--org-transition-fast),
+            box-shadow var(--org-transition-fast);
+}
+
+.org-card-interactive:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--org-shadow);
+}
