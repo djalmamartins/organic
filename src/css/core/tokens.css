@@ -20,15 +20,14 @@
     --org-warning: #f59e0b;
     --org-danger: #dc3545;
     --org-info: #0ea5e9;
+    --org-highlight: #fff3b0;
 
     /* Interface */
-    --org-bg: #ffffff;
-    --org-surface: #f3f4f6;
-
-    --org-text: #111418;
-    --org-text-muted: #6b7280;
-    --org-text-inverse: #ffffff;
-
+    --org-bg: var(--org-white);
+    --org-surface: var(--org-light);
+    --org-text: var(--org-dark);
+    --org-text-muted: var(--org-gray);
+    --org-text-inverse: var(--org-white);
     --org-border: #e5e7eb;
 
     /* Typography */
