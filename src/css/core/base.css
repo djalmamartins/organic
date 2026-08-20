@@ -1,0 +1,65 @@
+/**
+ * Organic UI v2
+ * Base
+ */
+
+html {
+    font-size: 16px;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--org-bg);
+    color: var(--org-text);
+    font-family: var(--org-font-family);
+    font-size: var(--org-font-size);
+    font-weight: var(--org-font-weight);
+    line-height: var(--org-line-height);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scroll */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Links */
+
+a {
+    color: var(--org-primary);
+    transition: color var(--org-transition-fast);
+}
+
+a:hover {
+    color: var(--org-primary-dark);
+}
+
+/* Selection */
+
+::selection {
+    background-color: var(--org-primary);
+    color: var(--org-white);
+}
+
+/* Horizontal rule */
+
+hr {
+    margin: var(--org-space-6) 0;
+    border: 0;
+    border-top: 1px solid var(--org-border);
+}
+
+/* Hidden */
+
+[hidden] {
+    display: none !important;
+}
+
+/* Disabled */
+
+:disabled {
+    cursor: not-allowed;
+}
