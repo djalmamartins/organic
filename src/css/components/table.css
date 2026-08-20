@@ -1,0 +1,307 @@
+/**
+ * Organic UI v2
+ * Table
+ */
+
+/* ==========================================================
+   Wrapper
+   ========================================================== */
+
+.org-table-wrapper {
+    width: 100%;
+    overflow: hidden;
+
+    background: var(--org-bg);
+
+    border: 1px solid var(--org-border);
+    border-radius: var(--org-radius-lg);
+}
+
+
+/* ==========================================================
+   Scroll
+   ========================================================== */
+
+.org-table-scroll {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+/* ==========================================================
+   Table
+   ========================================================== */
+
+.org-table {
+    width: 100%;
+    min-width: 40rem;
+
+    border-collapse: collapse;
+
+    background: var(--org-bg);
+    color: var(--org-text);
+
+    font-size: var(--org-font-size-sm);
+}
+
+
+/* ==========================================================
+   Cells
+   ========================================================== */
+
+.org-table th,
+.org-table td {
+    padding: var(--org-space-3) var(--org-space-4);
+
+    text-align: left;
+    vertical-align: middle;
+
+    border-bottom: 1px solid var(--org-border);
+}
+
+
+/* ==========================================================
+   Header
+   ========================================================== */
+
+.org-table thead th {
+    background: var(--org-surface);
+
+    color: var(--org-text);
+
+    font-size: var(--org-font-size-xs);
+    font-weight: var(--org-font-weight-semibold);
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================================
+   Body
+   ========================================================== */
+
+.org-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.org-table tbody tr {
+    transition: background-color var(--org-transition-fast);
+}
+
+
+/* ==========================================================
+   Hover
+   ========================================================== */
+
+.org-table-hover tbody tr:hover {
+    background: var(--org-surface);
+}
+
+
+/* ==========================================================
+   Striped
+   ========================================================== */
+
+.org-table-striped tbody tr:nth-child(even) {
+    background: var(--org-surface);
+}
+
+
+/* ==========================================================
+   Compact
+   ========================================================== */
+
+.org-table-sm th,
+.org-table-sm td {
+    padding: var(--org-space-2) var(--org-space-3);
+}
+
+
+/* ==========================================================
+   Numeric
+   ========================================================== */
+
+.org-table-number {
+    text-align: right !important;
+    font-variant-numeric: tabular-nums;
+}
+
+
+/* ==========================================================
+   Actions
+   ========================================================== */
+
+.org-table-actions {
+    display: inline-flex;
+    align-items: center;
+
+    gap: var(--org-space-1);
+
+    white-space: nowrap;
+}
+
+.org-table-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2rem;
+    height: 2rem;
+
+    padding: 0;
+
+    background: transparent;
+    color: var(--org-text-muted);
+
+    border: 1px solid transparent;
+    border-radius: var(--org-radius);
+
+    cursor: pointer;
+
+    transition:
+            background-color var(--org-transition-fast),
+            color var(--org-transition-fast),
+            border-color var(--org-transition-fast);
+}
+
+.org-table-action:hover {
+    background: var(--org-light);
+    color: var(--org-text);
+}
+
+.org-table-action-danger {
+    color: var(--org-danger);
+}
+
+
+/* ==========================================================
+   Selection
+   ========================================================== */
+
+.org-table-select {
+    width: 2.5rem;
+}
+
+.org-table-check {
+    width: 1rem;
+    height: 1rem;
+
+    margin: 0;
+
+    accent-color: var(--org-primary);
+
+    cursor: pointer;
+}
+
+.org-table-row-selected {
+    background: color-mix(
+            in srgb,
+            var(--org-primary) 6%,
+            var(--org-white)
+    );
+}
+
+
+/* ==========================================================
+   Sortable
+   ========================================================== */
+
+.org-table-sort {
+    display: inline-flex;
+    align-items: center;
+
+    gap: var(--org-space-1);
+
+    padding: 0;
+
+    background: transparent;
+    color: inherit;
+
+    border: 0;
+
+    font: inherit;
+    font-weight: inherit;
+
+    cursor: pointer;
+}
+
+.org-table-sort::after {
+    content: "↕";
+
+    color: var(--org-text-muted);
+
+    font-size: .75em;
+}
+
+.org-table-sort[aria-sort="ascending"]::after {
+    content: "↑";
+    color: var(--org-primary);
+}
+
+.org-table-sort[aria-sort="descending"]::after {
+    content: "↓";
+    color: var(--org-primary);
+}
+
+
+/* ==========================================================
+   Empty state
+   ========================================================== */
+
+.org-table-empty {
+    padding: var(--org-space-12) !important;
+
+    color: var(--org-text-muted);
+    text-align: center !important;
+}
+
+
+/* ==========================================================
+   Footer
+   ========================================================== */
+
+.org-table-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: var(--org-space-4);
+
+    padding: var(--org-space-3) var(--org-space-4);
+
+    background: var(--org-bg);
+
+    border-top: 1px solid var(--org-border);
+
+    color: var(--org-text-muted);
+    font-size: var(--org-font-size-xs);
+}
+
+
+/* ==========================================================
+   Selection toolbar
+   ========================================================== */
+
+.org-table-selection {
+    display: flex;
+    align-items: center;
+
+    gap: var(--org-space-2);
+}
+
+.org-table-selection-count {
+    color: var(--org-text);
+    font-weight: var(--org-font-weight-medium);
+}
+
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width: 767px) {
+    .org-table-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
