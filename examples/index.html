@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Organic UI v2 - Playground</title>
+
+    <link rel="stylesheet" href="../src/css/organic.css">
+
+    <style>
+        body {
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .preview {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+
+            margin-top: 1rem;
+            padding: 1.5rem;
+
+            border: 1px solid var(--org-border);
+            border-radius: var(--org-radius-lg);
+
+            background: var(--org-surface);
+        }
+    </style>
+</head>
+
+<body>
+
+<main class="org-container">
+
+    <header>
+        <h1>Organic UI v2</h1>
+        <p class="org-lead">
+            Playground de desenvolvimento e testes.
+        </p>
+    </header>
+
+    <hr>
+
+    <section>
+        <h2>Forms</h2>
+
+        <div class="preview">
+
+            <form style="width: 100%; max-width: 600px;">
+
+                <div class="org-form-group">
+                    <label class="org-label" for="name">
+                        Nome
+                    </label>
+
+                    <input
+                            class="org-input"
+                            id="name"
+                            type="text"
+                            placeholder="Digite seu nome"
+                    >
+
+                    <small class="org-help">
+                        Informe seu nome completo.
+                    </small>
+                </div>
+
+                <div class="org-form-group">
+                    <label class="org-label" for="email">
+                        E-mail
+                    </label>
+
+                    <input
+                            class="org-input is-success"
+                            id="email"
+                            type="email"
+                            value="teste@email.com"
+                    >
+
+                    <small class="org-feedback-success">
+                        E-mail válido.
+                    </small>
+                </div>
+
+                <div class="org-form-group">
+                    <label class="org-label" for="password">
+                        Senha
+                    </label>
+
+                    <input
+                            class="org-input is-danger"
+                            id="password"
+                            type="password"
+                    >
+
+                    <small class="org-feedback-danger">
+                        A senha é obrigatória.
+                    </small>
+                </div>
+
+                <div class="org-form-group">
+                    <label class="org-label" for="country">
+                        País
+                    </label>
+
+                    <select class="org-select" id="country">
+                        <option>Brasil</option>
+                        <option>Portugal</option>
+                        <option>Argentina</option>
+                    </select>
+                </div>
+
+                <div class="org-form-group">
+                    <label class="org-label" for="message">
+                        Mensagem
+                    </label>
+
+                    <textarea
+                            class="org-textarea"
+                            id="message"
+                            placeholder="Digite sua mensagem"
+                    ></textarea>
+                </div>
+
+                <div class="org-form-group">
+                    <label class="org-check">
+                        <input type="checkbox">
+                        Aceito os termos
+                    </label>
+                </div>
+
+                <button class="org-btn org-btn-primary" type="submit">
+                    Enviar
+                </button>
+
+            </form>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Buttons</h2>
+
+        <div class="preview">
+
+            <button class="org-btn org-btn-primary">
+                Primary
+            </button>
+
+            <button class="org-btn org-btn-secondary">
+                Secondary
+            </button>
+
+            <button class="org-btn org-btn-light">
+                Light
+            </button>
+
+            <button class="org-btn org-btn-outline">
+                Outline
+            </button>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Sizes</h2>
+
+        <div class="preview">
+
+            <button class="org-btn org-btn-primary org-btn-sm">
+                Small
+            </button>
+
+            <button class="org-btn org-btn-primary">
+                Default
+            </button>
+
+            <button class="org-btn org-btn-primary org-btn-lg">
+                Large
+            </button>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>States</h2>
+
+        <div class="preview">
+
+            <button class="org-btn org-btn-primary">
+                Normal
+            </button>
+
+            <button class="org-btn org-btn-primary" disabled>
+                Disabled
+            </button>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Links</h2>
+
+        <div class="preview">
+
+            <a href="#" class="org-btn org-btn-primary">
+                Link Button
+            </a>
+
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>
