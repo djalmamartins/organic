@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+    >
+
+    <title>Organic UI — Spotlight</title>
+
+    <link
+            rel="stylesheet"
+            href="../src/css/organic.css"
+    >
+</head>
+
+<body>
+
+<main class="org-container">
+
+    <div class="org-py-8">
+
+        <h1>Spotlight</h1>
+
+        <p>
+            Pesquisa rápida e command palette do Organic.
+        </p>
+
+        <button
+                class="org-btn org-btn-primary"
+                type="button"
+                data-org-spotlight-open="organic-search"
+        >
+            Pesquisar
+            <span class="org-spotlight-key">⌘ K</span>
+        </button>
+
+    </div>
+
+</main>
+
+
+<div
+        class="org-spotlight"
+        id="organic-search"
+        data-org-spotlight
+        aria-hidden="true"
+>
+
+    <div
+            class="org-spotlight-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Pesquisar Organic"
+    >
+
+        <div class="org-spotlight-search">
+
+            <span
+                    class="org-spotlight-search-icon"
+                    aria-hidden="true"
+            >
+                ⌕
+            </span>
+
+            <input
+                    class="org-spotlight-input"
+                    type="search"
+                    placeholder="Pesquisar componentes..."
+                    autocomplete="off"
+                    data-org-spotlight-input
+            >
+
+            <span class="org-spotlight-key">
+                ESC
+            </span>
+
+        </div>
+
+
+        <div class="org-spotlight-results">
+
+            <div class="org-spotlight-group">
+
+                <span class="org-spotlight-label">
+                    Componentes
+                </span>
+
+                <a
+                        class="org-spotlight-item"
+                        href="#"
+                        data-org-spotlight-item
+                        data-org-spotlight-search="button botões actions"
+                >
+                    <span class="org-spotlight-item-icon">
+                        ◇
+                    </span>
+
+                    Buttons
+                </a>
+
+                <a
+                        class="org-spotlight-item"
+                        href="#"
+                        data-org-spotlight-item
+                        data-org-spotlight-search="modal dialog janela"
+                >
+                    <span class="org-spotlight-item-icon">
+                        □
+                    </span>
+
+                    Modal
+                </a>
+
+                <a
+                        class="org-spotlight-item"
+                        href="#"
+                        data-org-spotlight-item
+                        data-org-spotlight-search="carousel slider slides"
+                >
+                    <span class="org-spotlight-item-icon">
+                        ▣
+                    </span>
+
+                    Carousel
+                </a>
+
+                <a
+                        class="org-spotlight-item"
+                        href="#"
+                        data-org-spotlight-item
+                        data-org-spotlight-search="tabela table dados"
+                >
+                    <span class="org-spotlight-item-icon">
+                        ≡
+                    </span>
+
+                    Tables
+                </a>
+
+            </div>
+
+
+            <div
+                    class="org-spotlight-empty"
+                    data-org-spotlight-empty
+            >
+                Nenhum resultado encontrado.
+            </div>
+
+        </div>
+
+
+        <footer class="org-spotlight-footer">
+
+            <span>
+                <span class="org-spotlight-key">↑</span>
+                <span class="org-spotlight-key">↓</span>
+                navegar
+            </span>
+
+            <span>
+                <span class="org-spotlight-key">↵</span>
+                abrir
+            </span>
+
+            <span>
+                <span class="org-spotlight-key">ESC</span>
+                fechar
+            </span>
+
+        </footer>
+
+    </div>
+
+</div>
+
+
+<script
+        type="module"
+        src="../src/js/organic.js"
+></script>
+
+</body>
+</html>

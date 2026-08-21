@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+    >
+
+    <title>Organic UI — Tree View</title>
+
+    <link
+            rel="stylesheet"
+            href="../src/css/organic.css"
+    >
+</head>
+
+<body>
+
+<main class="org-container">
+
+    <div class="org-py-8">
+
+        <h1>Tree View</h1>
+
+        <ul class="org-tree">
+
+            <li
+                    class="org-tree-item is-open"
+                    data-org-tree-item
+            >
+
+                <div class="org-tree-row">
+
+                    <button
+                            class="org-tree-toggle"
+                            type="button"
+                            data-org-tree-toggle
+                            aria-expanded="true"
+                            aria-label="Expandir componentes"
+                    ></button>
+
+                    <a
+                            class="org-tree-link"
+                            href="#"
+                    >
+                        <span class="org-tree-icon">
+                            ▣
+                        </span>
+
+                        <span class="org-tree-label">
+                            Componentes
+                        </span>
+                    </a>
+
+                </div>
+
+
+                <ul class="org-tree-children">
+
+                    <li class="org-tree-item">
+
+                        <div class="org-tree-row">
+
+                            <span class="org-tree-spacer"></span>
+
+                            <a
+                                    class="org-tree-link is-active"
+                                    href="#"
+                            >
+                                <span class="org-tree-icon">
+                                    •
+                                </span>
+
+                                Buttons
+                            </a>
+
+                        </div>
+
+                    </li>
+
+
+                    <li
+                            class="org-tree-item"
+                            data-org-tree-item
+                    >
+
+                        <div class="org-tree-row">
+
+                            <button
+                                    class="org-tree-toggle"
+                                    type="button"
+                                    data-org-tree-toggle
+                                    aria-expanded="false"
+                            ></button>
+
+                            <a
+                                    class="org-tree-link"
+                                    href="#"
+                            >
+                                Forms
+                            </a>
+
+                        </div>
+
+
+                        <ul class="org-tree-children">
+
+                            <li class="org-tree-item">
+
+                                <div class="org-tree-row">
+
+                                    <span
+                                            class="org-tree-spacer"
+                                    ></span>
+
+                                    <a
+                                            class="org-tree-link"
+                                            href="#"
+                                    >
+                                        Input
+                                    </a>
+
+                                </div>
+
+                            </li>
+
+                            <li class="org-tree-item">
+
+                                <div class="org-tree-row">
+
+                                    <span
+                                            class="org-tree-spacer"
+                                    ></span>
+
+                                    <a
+                                            class="org-tree-link"
+                                            href="#"
+                                    >
+                                        Select
+                                    </a>
+
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li class="org-tree-item">
+
+                <div class="org-tree-row">
+
+                    <span class="org-tree-spacer"></span>
+
+                    <a
+                            class="org-tree-link"
+                            href="#"
+                    >
+                        <span class="org-tree-icon">
+                            ◇
+                        </span>
+
+                        Utilities
+                    </a>
+
+                </div>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</main>
+
+<script
+        type="module"
+        src="../src/js/organic.js"
+></script>
+
+</body>
+</html>

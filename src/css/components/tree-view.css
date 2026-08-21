@@ -1,0 +1,169 @@
+/**
+ * Organic UI v2
+ * Tree View
+ */
+
+.org-tree,
+.org-tree ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.org-tree ul {
+    margin-left: 1rem;
+    padding-left: .75rem;
+
+    border-left: 1px solid var(--org-border);
+}
+
+
+/* Item */
+
+.org-tree-item {
+    position: relative;
+}
+
+
+/* Row */
+
+.org-tree-row {
+    display: flex;
+    align-items: center;
+    gap: var(--org-space-1);
+
+    min-height: 2.25rem;
+}
+
+
+/* Toggle */
+
+.org-tree-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    width: 1.75rem;
+    height: 1.75rem;
+
+    padding: 0;
+
+    background: transparent;
+    color: var(--org-text-muted);
+
+    border: 0;
+    border-radius: var(--org-radius-sm);
+
+    cursor: pointer;
+
+    transition:
+            background-color var(--org-transition-fast),
+            transform var(--org-transition-fast);
+}
+
+.org-tree-toggle:hover {
+    background: var(--org-surface);
+    color: var(--org-text);
+}
+
+.org-tree-toggle::before {
+    content: "›";
+
+    font-size: 1.2rem;
+
+    transition: transform var(--org-transition-fast);
+}
+
+.org-tree-item.is-open > .org-tree-row
+.org-tree-toggle::before {
+    transform: rotate(90deg);
+}
+
+
+/* Spacer for items without children */
+
+.org-tree-spacer {
+    flex: 0 0 auto;
+
+    width: 1.75rem;
+}
+
+
+/* Link */
+
+.org-tree-link {
+    display: flex;
+    align-items: center;
+    gap: var(--org-space-2);
+
+    flex: 1 1 auto;
+
+    min-width: 0;
+    min-height: 2rem;
+
+    padding: 0 var(--org-space-2);
+
+    color: var(--org-text);
+
+    border-radius: var(--org-radius);
+
+    font-size: var(--org-font-size-sm);
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.org-tree-link:hover {
+    background: var(--org-surface);
+}
+
+.org-tree-link.is-active,
+.org-tree-link[aria-current="page"] {
+    background: color-mix(
+            in srgb,
+            var(--org-primary) 10%,
+            var(--org-white)
+    );
+
+    color: var(--org-primary);
+}
+
+
+/* Icon */
+
+.org-tree-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    width: 1.25rem;
+    height: 1.25rem;
+
+    color: var(--org-text-muted);
+}
+
+
+/* Label */
+
+.org-tree-label {
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* Children */
+
+.org-tree-children {
+    display: none;
+}
+
+.org-tree-item.is-open > .org-tree-children {
+    display: block;
+}

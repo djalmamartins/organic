@@ -1,0 +1,247 @@
+/**
+ * Organic UI v2
+ * Spotlight / Command Palette
+ */
+
+.org-spotlight {
+    position: fixed;
+    inset: 0;
+
+    z-index: var(--org-z-modal);
+
+    display: none;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    padding:
+            min(12vh, 7rem)
+            var(--org-space-4);
+
+    background: rgb(0 0 0 / 45%);
+}
+
+.org-spotlight.is-open {
+    display: flex;
+}
+
+
+/* Dialog */
+
+.org-spotlight-dialog {
+    width: min(100%, 38rem);
+
+    overflow: hidden;
+
+    background: var(--org-bg);
+
+    border: 1px solid var(--org-border);
+    border-radius: var(--org-radius-lg);
+
+    box-shadow: var(--org-shadow-lg);
+}
+
+
+/* Search */
+
+.org-spotlight-search {
+    display: flex;
+    align-items: center;
+    gap: var(--org-space-3);
+
+    min-height: 4rem;
+
+    padding: 0 var(--org-space-4);
+
+    border-bottom: 1px solid var(--org-border);
+}
+
+.org-spotlight-search-icon {
+    flex: 0 0 auto;
+
+    color: var(--org-text-muted);
+}
+
+.org-spotlight-input {
+    flex: 1 1 auto;
+
+    min-width: 0;
+
+    padding: 0;
+
+    background: transparent;
+    color: var(--org-text);
+
+    border: 0;
+    outline: 0;
+
+    font: inherit;
+    font-size: var(--org-font-size);
+}
+
+.org-spotlight-input::placeholder {
+    color: var(--org-text-muted);
+}
+
+
+/* Shortcut */
+
+.org-spotlight-key {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 1.75rem;
+    height: 1.5rem;
+
+    padding: 0 var(--org-space-1);
+
+    background: var(--org-surface);
+    color: var(--org-text-muted);
+
+    border: 1px solid var(--org-border);
+    border-radius: var(--org-radius-sm);
+
+    font-size: var(--org-font-size-xs);
+}
+
+
+/* Results */
+
+.org-spotlight-results {
+    max-height: min(60vh, 28rem);
+
+    overflow-y: auto;
+
+    padding: var(--org-space-2);
+}
+
+
+/* Group */
+
+.org-spotlight-group + .org-spotlight-group {
+    margin-top: var(--org-space-3);
+}
+
+.org-spotlight-label {
+    display: block;
+
+    padding:
+            var(--org-space-2)
+            var(--org-space-3);
+
+    color: var(--org-text-muted);
+
+    font-size: var(--org-font-size-xs);
+    font-weight: var(--org-font-weight-semibold);
+
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+
+/* Item */
+
+.org-spotlight-item {
+    display: flex;
+    align-items: center;
+    gap: var(--org-space-3);
+
+    width: 100%;
+    min-height: 2.75rem;
+
+    padding:
+            var(--org-space-2)
+            var(--org-space-3);
+
+    background: transparent;
+    color: var(--org-text);
+
+    border: 0;
+    border-radius: var(--org-radius);
+
+    font: inherit;
+    font-size: var(--org-font-size-sm);
+    text-align: left;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.org-spotlight-item:hover,
+.org-spotlight-item.is-active {
+    background: var(--org-surface);
+}
+
+.org-spotlight-item[hidden] {
+    display: none;
+}
+
+.org-spotlight-item-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    width: 1.5rem;
+    height: 1.5rem;
+
+    color: var(--org-text-muted);
+}
+
+
+/* Empty */
+
+.org-spotlight-empty {
+    display: none;
+
+    padding: var(--org-space-6);
+
+    color: var(--org-text-muted);
+
+    text-align: center;
+    font-size: var(--org-font-size-sm);
+}
+
+.org-spotlight-empty.is-visible {
+    display: block;
+}
+
+
+/* Footer */
+
+.org-spotlight-footer {
+    display: flex;
+    align-items: center;
+    gap: var(--org-space-4);
+
+    padding:
+            var(--org-space-2)
+            var(--org-space-4);
+
+    background: var(--org-surface);
+
+    border-top: 1px solid var(--org-border);
+
+    color: var(--org-text-muted);
+
+    font-size: var(--org-font-size-xs);
+}
+
+
+/* Mobile */
+
+@media (max-width: 575px) {
+
+    .org-spotlight {
+        padding:
+                var(--org-space-3)
+                var(--org-space-2);
+    }
+
+    .org-spotlight-dialog {
+        width: 100%;
+    }
+
+}

@@ -13,3 +13,5 @@ import "./components/popover.js";
 import "./components/offcanvas.js";
 import "./components/code.js";
 import "./components/stepper.js";
+import "./components/tree-view.js";
+import "./components/spotlight.js";
