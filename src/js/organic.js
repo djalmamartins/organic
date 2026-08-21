@@ -8,3 +8,6 @@ import "./components/tabs.js";
 import "./components/tag.js";
 import "./components/accordion.js";
 import "./components/toast.js";
+import "./components/collapse.js";
+import "./components/popover.js";
+import "./components/offcanvas.js";

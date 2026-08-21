@@ -1,0 +1,63 @@
+/**
+ * Organic UI v2
+ * Popover
+ */
+
+.org-popover {
+    position: relative;
+    display: inline-block;
+}
+
+.org-popover-panel {
+    position: absolute;
+    top: calc(100% + var(--org-space-2));
+    left: 50%;
+    z-index: var(--org-z-dropdown);
+
+    display: none;
+
+    width: min(18rem, 90vw);
+
+    padding: var(--org-space-4);
+
+    background: var(--org-bg);
+    color: var(--org-text);
+
+    border: 1px solid var(--org-border);
+    border-radius: var(--org-radius-lg);
+
+    box-shadow: var(--org-shadow-lg);
+
+    transform: translateX(-50%);
+}
+
+.org-popover.is-open .org-popover-panel {
+    display: block;
+}
+
+.org-popover-title {
+    margin-bottom: var(--org-space-2);
+
+    font-size: var(--org-font-size-sm);
+    font-weight: var(--org-font-weight-semibold);
+}
+
+.org-popover-text {
+    margin: 0;
+
+    color: var(--org-text-muted);
+    font-size: var(--org-font-size-sm);
+}
+
+.org-popover-end .org-popover-panel {
+    right: 0;
+    left: auto;
+
+    transform: none;
+}
+
+.org-popover-start .org-popover-panel {
+    left: 0;
+
+    transform: none;
+}

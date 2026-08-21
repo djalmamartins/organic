@@ -1,0 +1,152 @@
+/**
+ * Organic UI v2
+ * Offcanvas
+ */
+
+.org-offcanvas {
+    position: fixed;
+    inset: 0;
+
+    z-index: var(--org-z-modal);
+
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+.org-offcanvas.is-open {
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* Backdrop */
+
+.org-offcanvas-backdrop {
+    position: absolute;
+    inset: 0;
+
+    background: rgb(17 20 24 / 55%);
+
+    opacity: 0;
+
+    transition: opacity var(--org-transition);
+}
+
+.org-offcanvas.is-open .org-offcanvas-backdrop {
+    opacity: 1;
+}
+
+
+/* Panel */
+
+.org-offcanvas-panel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    width: min(22rem, 90vw);
+
+    background: var(--org-bg);
+    color: var(--org-text);
+
+    box-shadow: var(--org-shadow-lg);
+
+    transform: translateX(-100%);
+
+    transition: transform var(--org-transition);
+}
+
+.org-offcanvas.is-open .org-offcanvas-panel {
+    transform: translateX(0);
+}
+
+
+/* Right */
+
+.org-offcanvas-end .org-offcanvas-panel {
+    right: 0;
+    left: auto;
+
+    transform: translateX(100%);
+}
+
+.org-offcanvas-end.is-open .org-offcanvas-panel {
+    transform: translateX(0);
+}
+
+
+/* Header */
+
+.org-offcanvas-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--org-space-4);
+
+    padding: var(--org-space-4);
+
+    border-bottom: 1px solid var(--org-border);
+}
+
+.org-offcanvas-title {
+    margin: 0;
+
+    font-size: var(--org-font-size-xl);
+    font-weight: var(--org-font-weight-semibold);
+}
+
+
+/* Body */
+
+.org-offcanvas-body {
+    flex: 1 1 auto;
+
+    overflow-y: auto;
+
+    padding: var(--org-space-4);
+}
+
+
+/* Close */
+
+.org-offcanvas-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2rem;
+    height: 2rem;
+
+    padding: 0;
+
+    background: transparent;
+    color: var(--org-text-muted);
+
+    border: 0;
+    border-radius: var(--org-radius);
+
+    font-size: 1.4rem;
+
+    cursor: pointer;
+}
+
+.org-offcanvas-close:hover {
+    background: var(--org-light);
+    color: var(--org-text);
+}
+
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    .org-offcanvas-panel,
+    .org-offcanvas-backdrop {
+        transition: none;
+    }
+}
