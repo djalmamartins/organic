@@ -1,0 +1,97 @@
+/**
+ * Organic UI v2
+ * List Group
+ */
+
+.org-list-group {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+    padding: 0;
+
+    background: var(--org-bg);
+
+    border: 1px solid var(--org-border);
+    border-radius: var(--org-radius-lg);
+
+    overflow: hidden;
+
+    list-style: none;
+}
+
+.org-list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--org-space-3);
+
+    width: 100%;
+
+    padding: var(--org-space-3) var(--org-space-4);
+
+    background: var(--org-bg);
+    color: var(--org-text);
+
+    border: 0;
+    border-bottom: 1px solid var(--org-border);
+
+    font: inherit;
+    font-size: var(--org-font-size-sm);
+    text-align: left;
+    text-decoration: none;
+
+    transition:
+            background-color var(--org-transition-fast),
+            color var(--org-transition-fast);
+}
+
+.org-list-group-item:last-child {
+    border-bottom: 0;
+}
+
+a.org-list-group-item,
+button.org-list-group-item {
+    cursor: pointer;
+}
+
+a.org-list-group-item:hover,
+button.org-list-group-item:hover {
+    background: var(--org-surface);
+}
+
+.org-list-group-item.is-active {
+    background: color-mix(
+            in srgb,
+            var(--org-primary) 10%,
+            var(--org-white)
+    );
+
+    color: var(--org-primary-dark);
+}
+
+.org-list-group-item.is-disabled,
+.org-list-group-item[aria-disabled="true"] {
+    opacity: .5;
+    pointer-events: none;
+}
+
+.org-list-group-content {
+    min-width: 0;
+}
+
+.org-list-group-title {
+    display: block;
+
+    color: inherit;
+
+    font-weight: var(--org-font-weight-medium);
+}
+
+.org-list-group-text {
+    margin-top: var(--org-space-1);
+
+    color: var(--org-text-muted);
+
+    font-size: var(--org-font-size-xs);
+}

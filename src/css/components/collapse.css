@@ -1,0 +1,16 @@
+/**
+ * Organic UI v2
+ * Collapse
+ */
+
+.org-collapse {
+    display: none;
+}
+
+.org-collapse.is-open {
+    display: block;
+}
+
+.org-collapse-content {
+    padding-top: var(--org-space-3);
+}

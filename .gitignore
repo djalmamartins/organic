@@ -1,1 +1,13 @@
+# macOS
+.DS_Store
+
+# Environment
+.env
+
+# Local tools
+.codelab.json
+*.code-workspace
+
+# IDE
 .idea/
+.vscode/
