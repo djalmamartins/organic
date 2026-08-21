@@ -1,0 +1,62 @@
+/**
+ * Organic UI v2
+ * Accordion
+ */
+
+.org-accordion {
+    width: 100%;
+}
+
+.org-accordion-item {
+    border-bottom: 1px solid var(--org-border);
+}
+
+.org-accordion-item:first-child {
+    border-top: 1px solid var(--org-border);
+}
+
+.org-accordion-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--org-space-4);
+
+    width: 100%;
+
+    padding: var(--org-space-4) 0;
+
+    background: transparent;
+    color: var(--org-text);
+
+    border: 0;
+
+    font: inherit;
+    font-weight: var(--org-font-weight-medium);
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.org-accordion-trigger:hover {
+    color: var(--org-primary-dark);
+}
+
+.org-accordion-icon {
+    flex: 0 0 auto;
+
+    transition: transform var(--org-transition-fast);
+}
+
+.org-accordion-trigger[aria-expanded="true"] .org-accordion-icon {
+    transform: rotate(180deg);
+}
+
+.org-accordion-panel {
+    padding-bottom: var(--org-space-4);
+
+    color: var(--org-text-muted);
+}
+
+.org-accordion-panel[hidden] {
+    display: none;
+}

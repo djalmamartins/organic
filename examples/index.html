@@ -48,11 +48,267 @@
     <hr>
 
     <hr>
+    <section>
+        <h2>Accordion</h2>
 
+        <div
+                class="org-accordion"
+                data-org-accordion
+        >
+
+            <div class="org-accordion-item">
+
+                <button
+                        class="org-accordion-trigger"
+                        type="button"
+                        data-org-accordion-trigger
+                        aria-expanded="true"
+                        aria-controls="accordion-1"
+                >
+                    O que é o Organic UI?
+
+                    <span
+                            class="org-accordion-icon"
+                            aria-hidden="true"
+                    >
+                    ⌄
+                </span>
+                </button>
+
+                <div
+                        class="org-accordion-panel"
+                        id="accordion-1"
+                >
+                    <p>
+                        Organic UI é um framework leve de
+                        interface construído com CSS e
+                        JavaScript nativo.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="org-accordion-item">
+
+                <button
+                        class="org-accordion-trigger"
+                        type="button"
+                        data-org-accordion-trigger
+                        aria-expanded="false"
+                        aria-controls="accordion-2"
+                >
+                    Ele possui dependências?
+
+                    <span
+                            class="org-accordion-icon"
+                            aria-hidden="true"
+                    >
+                    ⌄
+                </span>
+                </button>
+
+                <div
+                        class="org-accordion-panel"
+                        id="accordion-2"
+                        hidden
+                >
+                    <p>
+                        Não. A proposta da versão 2 é funcionar
+                        sem jQuery, Bootstrap ou outras
+                        dependências obrigatórias.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="org-accordion-item">
+
+                <button
+                        class="org-accordion-trigger"
+                        type="button"
+                        data-org-accordion-trigger
+                        aria-expanded="false"
+                        aria-controls="accordion-3"
+                >
+                    Posso usar em qualquer projeto?
+
+                    <span
+                            class="org-accordion-icon"
+                            aria-hidden="true"
+                    >
+                    ⌄
+                </span>
+                </button>
+
+                <div
+                        class="org-accordion-panel"
+                        id="accordion-3"
+                        hidden
+                >
+                    <p>
+                        Sim. Ele pode ser usado com HTML puro,
+                        PHP, Node, React, Vue ou qualquer outro
+                        ambiente.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
     <hr>
+    <section>
 
+        <h2>Tag Input</h2>
+
+        <p>
+            Digite uma palavra e pressione Enter ou vírgula.
+        </p>
+
+        <div
+                class="org-tag-input"
+                data-org-tags
+        >
+
+            <div
+                    class="org-tag-input-list"
+                    data-org-tag-list
+            >
+
+            <span
+                    class="org-tag org-tag-primary"
+                    data-org-tag-value="HTML"
+            >
+                HTML
+
+                <button
+                        class="org-tag-remove"
+                        type="button"
+                        aria-label="Remover HTML"
+                        data-org-tag-remove
+                >
+                    ×
+                </button>
+            </span>
+
+
+                <span
+                        class="org-tag org-tag-primary"
+                        data-org-tag-value="CSS"
+                >
+                CSS
+
+                <button
+                        class="org-tag-remove"
+                        type="button"
+                        aria-label="Remover CSS"
+                        data-org-tag-remove
+                >
+                    ×
+                </button>
+            </span>
+
+            </div>
+
+
+            <input
+                    class="org-tag-input-control"
+                    type="text"
+                    placeholder="Adicionar tag..."
+                    data-org-tag-input
+            >
+
+        </div>
+
+    </section>
     <hr>
+    <section>
+        <h2>Tags</h2>
 
+        <h3>Variações básicas</h3>
+
+        <div class="preview">
+            <span class="org-tag">Design</span>
+            <span class="org-tag org-tag-primary">Front-end</span>
+            <span class="org-tag org-tag-info">Back-end</span>
+            <span class="org-tag org-tag-warning">Marketing</span>
+            <span class="org-tag org-tag-danger">Bloqueado</span>
+            <span class="org-tag org-tag-success">Recursos Humanos</span>
+        </div>
+
+        <h3>Com ícones</h3>
+
+        <div class="preview">
+        <span class="org-tag org-tag-warning">
+            <span class="org-tag-icon">★</span>
+            Destaque
+        </span>
+
+            <span class="org-tag org-tag-success">
+            <span class="org-tag-icon">✓</span>
+            Concluído
+        </span>
+
+            <span class="org-tag org-tag-info">
+            <span class="org-tag-icon">i</span>
+            Informação
+        </span>
+        </div>
+
+        <h3>Removíveis</h3>
+
+        <div class="preview">
+            <div class="org-tags">
+
+            <span class="org-tag">
+                React
+                <button
+                        class="org-tag-remove"
+                        type="button"
+                        aria-label="Remover React"
+                >
+                    ×
+                </button>
+            </span>
+
+                <span class="org-tag">
+                Vue
+                <button
+                        class="org-tag-remove"
+                        type="button"
+                        aria-label="Remover Vue"
+                >
+                    ×
+                </button>
+            </span>
+
+                <span class="org-tag">
+                JavaScript
+                <button
+                        class="org-tag-remove"
+                        type="button"
+                        aria-label="Remover JavaScript"
+                >
+                    ×
+                </button>
+            </span>
+
+                <span class="org-tag">
+                UI/UX
+                <button
+                        class="org-tag-remove"
+                        type="button"
+                        aria-label="Remover UI/UX"
+                >
+                    ×
+                </button>
+            </span>
+
+            </div>
+        </div>
+    </section>
     <hr>
     <section>
 

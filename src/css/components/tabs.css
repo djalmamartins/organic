@@ -133,6 +133,68 @@
     display: none;
 }
 
+/* ==========================================================
+   Tag input
+   ========================================================== */
+
+.org-tag-input {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: var(--org-space-2);
+
+    width: 100%;
+
+    padding: var(--org-space-2);
+
+    background: var(--org-bg);
+
+    border: 1px solid var(--org-border);
+    border-radius: var(--org-radius);
+
+    cursor: text;
+
+    transition:
+            border-color var(--org-transition-fast),
+            box-shadow var(--org-transition-fast);
+}
+
+.org-tag-input:focus-within {
+    border-color: var(--org-primary);
+
+    box-shadow: 0 0 0 3px
+    color-mix(
+            in srgb,
+            var(--org-primary) 20%,
+            transparent
+    );
+}
+
+.org-tag-input-list {
+    display: contents;
+}
+
+.org-tag-input-control {
+    flex: 1 1 8rem;
+
+    min-width: 8rem;
+
+    padding: var(--org-space-1);
+
+    background: transparent;
+    color: var(--org-text);
+
+    border: 0;
+    outline: 0;
+
+    font: inherit;
+}
+
+.org-tag-input-control::placeholder {
+    color: var(--org-text-muted);
+}
+
 
 /* ==========================================================
    Responsive
