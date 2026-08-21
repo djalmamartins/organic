@@ -1,0 +1,147 @@
+/**
+ * Organic UI v2
+ * Input Group
+ */
+
+.org-input-group {
+    display: flex;
+    align-items: stretch;
+
+    width: 100%;
+}
+
+.org-input-group > .org-input,
+.org-input-group > .org-select {
+    position: relative;
+    z-index: 1;
+
+    flex: 1 1 auto;
+
+    min-width: 0;
+
+    border-radius: 0;
+}
+
+.org-input-group > .org-input:first-child,
+.org-input-group > .org-select:first-child {
+    border-top-left-radius: var(--org-radius);
+    border-bottom-left-radius: var(--org-radius);
+}
+
+.org-input-group > .org-input:last-child,
+.org-input-group > .org-select:last-child {
+    border-top-right-radius: var(--org-radius);
+    border-bottom-right-radius: var(--org-radius);
+}
+
+.org-input-group > * + * {
+    margin-left: -1px;
+}
+
+
+/* ==========================================================
+   Addon
+   ========================================================== */
+
+.org-input-addon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    padding: 0 var(--org-space-3);
+
+    background: var(--org-surface);
+    color: var(--org-text-muted);
+
+    border: 1px solid var(--org-border);
+
+    font-size: var(--org-font-size-sm);
+    white-space: nowrap;
+}
+
+.org-input-group > .org-input-addon:first-child {
+    border-top-left-radius: var(--org-radius);
+    border-bottom-left-radius: var(--org-radius);
+}
+
+.org-input-group > .org-input-addon:last-child {
+    border-top-right-radius: var(--org-radius);
+    border-bottom-right-radius: var(--org-radius);
+}
+
+
+/* ==========================================================
+   Button
+   ========================================================== */
+
+.org-input-group > .org-btn {
+    position: relative;
+    z-index: 1;
+
+    border-radius: 0;
+}
+
+.org-input-group > .org-btn:first-child {
+    border-top-left-radius: var(--org-radius);
+    border-bottom-left-radius: var(--org-radius);
+}
+
+.org-input-group > .org-btn:last-child {
+    border-top-right-radius: var(--org-radius);
+    border-bottom-right-radius: var(--org-radius);
+}
+
+
+/* ==========================================================
+   Focus
+   ========================================================== */
+
+.org-input-group > .org-input:focus,
+.org-input-group > .org-select:focus {
+    z-index: 2;
+}
+
+
+/* ==========================================================
+   Icon
+   ========================================================== */
+
+.org-input-icon {
+    position: relative;
+
+    width: 100%;
+}
+
+.org-input-icon > .org-input {
+    padding-left: 2.75rem;
+}
+
+.org-input-icon-end > .org-input {
+    padding-right: 2.75rem;
+    padding-left: var(--org-space-4);
+}
+
+.org-input-icon-item {
+    position: absolute;
+    top: 50%;
+    left: var(--org-space-3);
+
+    z-index: 2;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(-50%);
+
+    color: var(--org-text-muted);
+
+    pointer-events: none;
+}
+
+.org-input-icon-end .org-input-icon-item {
+    right: var(--org-space-3);
+    left: auto;
+}
