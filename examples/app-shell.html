@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Organic UI v2 - Playground</title>
+
+    <link rel="stylesheet" href="../src/css/organic.css">
+
+    <style>
+        body {
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .preview {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+
+            margin-top: 1rem;
+            padding: 1.5rem;
+
+            border: 1px solid var(--org-border);
+            border-radius: var(--org-radius-lg);
+
+            background: var(--org-surface);
+        }
+    </style>
+</head>
+
+<body>
+
+<main class="org-container">
+
+    <header>
+        <h1>Organic UI v2</h1>
+        <p class="org-lead">
+            Playground de desenvolvimento e testes.
+        </p>
+    </header>
+    <hr>
+    <div class="org-app">
+
+        <aside class="org-sidebar">
+
+            <header class="org-sidebar-header">
+                <a class="org-sidebar-brand" href="#">
+                    Organic
+                </a>
+            </header>
+
+            <div class="org-sidebar-body">
+
+                <section class="org-sidebar-section">
+
+                <span class="org-sidebar-label">
+                    Principal
+                </span>
+
+                    <ul class="org-sidebar-nav">
+
+                        <li>
+                            <a
+                                    class="org-sidebar-link is-active"
+                                    href="#"
+                                    aria-current="page"
+                            >
+                                <span class="org-sidebar-icon">⌂</span>
+                                Dashboard
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="org-sidebar-link" href="#">
+                                <span class="org-sidebar-icon">●</span>
+                                Usuários
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="org-sidebar-link" href="#">
+                                <span class="org-sidebar-icon">□</span>
+                                Relatórios
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </section>
+
+
+                <section class="org-sidebar-section">
+
+                <span class="org-sidebar-label">
+                    Sistema
+                </span>
+
+                    <ul class="org-sidebar-nav">
+
+                        <li>
+                            <a class="org-sidebar-link" href="#">
+                                Configurações
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="org-sidebar-link" href="#">
+                                Suporte
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </section>
+
+            </div>
+
+
+            <footer class="org-sidebar-footer">
+
+                <div class="org-flex org-items-center org-gap-3">
+
+                <span class="org-avatar">
+                    <span class="org-avatar-initials">
+                        DM
+                    </span>
+                </span>
+
+                    <div>
+                        <strong>Djalma</strong>
+                        <div class="org-text-muted">
+                            Administrador
+                        </div>
+                    </div>
+
+                </div>
+
+            </footer>
+
+        </aside>
+
+
+        <main class="org-app-main">
+
+            <header class="org-navbar">
+
+                <div>
+                    <strong>Dashboard</strong>
+                </div>
+
+                <div class="org-navbar-actions">
+
+                    <button class="org-btn org-btn-light">
+                        Notificações
+                    </button>
+
+                    <button class="org-btn org-btn-primary">
+                        Novo
+                    </button>
+
+                </div>
+
+            </header>
+
+            <div class="org-app-content">
+
+                <h1>Dashboard</h1>
+
+                <p class="org-text-muted">
+                    Exemplo de aplicação construída com Organic.
+                </p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</main>
+<script type="module" src="../src/js/organic.js"></script>
+</body>
+</html>

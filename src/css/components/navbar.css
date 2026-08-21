@@ -1,0 +1,104 @@
+/**
+ * Organic UI v2
+ * Navbar
+ */
+
+.org-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--org-space-4);
+
+    min-height: 4rem;
+    padding: 0 var(--org-space-4);
+
+    background: var(--org-bg);
+    color: var(--org-text);
+
+    border-bottom: 1px solid var(--org-border);
+}
+
+.org-navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--org-space-2);
+
+    color: var(--org-text);
+
+    font-size: var(--org-font-size-lg);
+    font-weight: var(--org-font-weight-semibold);
+    text-decoration: none;
+}
+
+.org-navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--org-space-1);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.org-navbar-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--org-space-2);
+
+    min-height: 2.5rem;
+    padding: 0 var(--org-space-3);
+
+    color: var(--org-text-muted);
+
+    border-radius: var(--org-radius);
+
+    font-size: var(--org-font-size-sm);
+    font-weight: var(--org-font-weight-medium);
+    text-decoration: none;
+
+    transition:
+            background-color var(--org-transition-fast),
+            color var(--org-transition-fast);
+}
+
+.org-navbar-link:hover {
+    background: var(--org-surface);
+    color: var(--org-text);
+}
+
+.org-navbar-link.is-active,
+.org-navbar-link[aria-current="page"] {
+    background: color-mix(
+            in srgb,
+            var(--org-primary) 10%,
+            var(--org-white)
+    );
+
+    color: var(--org-primary-dark);
+}
+
+.org-navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--org-space-2);
+}
+
+.org-navbar-toggle {
+    display: none;
+}
+
+
+/* Mobile */
+
+@media (max-width: 767px) {
+
+    .org-navbar-toggle {
+        display: inline-flex;
+    }
+
+    .org-navbar-nav {
+        display: none;
+    }
+
+}
