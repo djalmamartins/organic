@@ -1,0 +1,179 @@
+/**
+ * Organic UI v2
+ * Switch
+ */
+
+.org-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--org-space-2);
+
+    cursor: pointer;
+
+    user-select: none;
+}
+
+
+/* ==========================================================
+   Input
+   ========================================================== */
+
+.org-switch-input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+
+    border: 0;
+}
+
+
+/* ==========================================================
+   Track
+   ========================================================== */
+
+.org-switch-control {
+    position: relative;
+
+    flex: 0 0 auto;
+
+    width: 2.5rem;
+    height: 1.4rem;
+
+    background: var(--org-border);
+
+    border-radius: var(--org-radius-pill);
+
+    transition:
+            background-color var(--org-transition-fast),
+            box-shadow var(--org-transition-fast);
+}
+
+
+/* ==========================================================
+   Thumb
+   ========================================================== */
+
+.org-switch-control::after {
+    content: "";
+
+    position: absolute;
+
+    top: .2rem;
+    left: .2rem;
+
+    width: 1rem;
+    height: 1rem;
+
+    background: var(--org-white);
+
+    border-radius: 50%;
+
+    box-shadow: var(--org-shadow-sm);
+
+    transition: transform var(--org-transition-fast);
+}
+
+
+/* ==========================================================
+   Checked
+   ========================================================== */
+
+.org-switch-input:checked + .org-switch-control {
+    background: var(--org-primary);
+}
+
+.org-switch-input:checked + .org-switch-control::after {
+    transform: translateX(1.1rem);
+}
+
+
+/* ==========================================================
+   Focus
+   ========================================================== */
+
+.org-switch-input:focus-visible + .org-switch-control {
+    outline: 3px solid color-mix(
+            in srgb,
+            var(--org-primary) 30%,
+            transparent
+    );
+
+    outline-offset: 2px;
+}
+
+
+/* ==========================================================
+   Disabled
+   ========================================================== */
+
+.org-switch-input:disabled + .org-switch-control,
+.org-switch-input:disabled ~ .org-switch-label {
+    opacity: .5;
+}
+
+.org-switch:has(.org-switch-input:disabled) {
+    cursor: not-allowed;
+}
+
+
+/* ==========================================================
+   Label
+   ========================================================== */
+
+.org-switch-label {
+    color: var(--org-text);
+
+    font-size: var(--org-font-size-sm);
+}
+
+
+/* ==========================================================
+   Sizes
+   ========================================================== */
+
+.org-switch-sm .org-switch-control {
+    width: 2rem;
+    height: 1.15rem;
+}
+
+.org-switch-sm .org-switch-control::after {
+    top: .175rem;
+    left: .175rem;
+
+    width: .8rem;
+    height: .8rem;
+}
+
+.org-switch-sm
+.org-switch-input:checked
++ .org-switch-control::after {
+    transform: translateX(.85rem);
+}
+
+
+.org-switch-lg .org-switch-control {
+    width: 3rem;
+    height: 1.65rem;
+}
+
+.org-switch-lg .org-switch-control::after {
+    top: .225rem;
+    left: .225rem;
+
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.org-switch-lg
+.org-switch-input:checked
++ .org-switch-control::after {
+    transform: translateX(1.35rem);
+}
