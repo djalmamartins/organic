@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+    >
+
+    <title>Organic UI — Carousel</title>
+
+    <link
+            rel="stylesheet"
+            href="../src/css/organic.css"
+    >
+</head>
+
+<body>
+
+<main class="org-container">
+
+    <div class="org-py-8">
+
+        <h1>Carousel</h1>
+
+        <p class="org-text-muted">
+            Carousel responsivo, sem dependências externas.
+        </p>
+
+
+        <!-- ===============================================
+             Basic
+             =============================================== -->
+
+        <section class="org-mt-8">
+
+            <h2>Carousel básico</h2>
+
+            <div
+                    class="org-carousel"
+                    data-org-carousel
+                    data-org-items="1"
+                    data-org-loop="true"
+                    data-org-drag="true"
+                    tabindex="0"
+                    aria-label="Exemplo de carousel"
+            >
+
+                <div class="org-carousel-viewport">
+
+                    <div class="org-carousel-track">
+
+                        <div class="org-carousel-slide">
+
+                            <div class="org-card">
+                                <div class="org-card-body">
+
+                                    <h3>
+                                        Primeiro slide
+                                    </h3>
+
+                                    <p>
+                                        Organic Carousel sem
+                                        dependências externas.
+                                    </p>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="org-carousel-slide">
+
+                            <div class="org-card">
+                                <div class="org-card-body">
+
+                                    <h3>
+                                        Segundo slide
+                                    </h3>
+
+                                    <p>
+                                        Funciona com mouse,
+                                        touch e teclado.
+                                    </p>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="org-carousel-slide">
+
+                            <div class="org-card">
+                                <div class="org-card-body">
+
+                                    <h3>
+                                        Terceiro slide
+                                    </h3>
+
+                                    <p>
+                                        Também possui dots,
+                                        loop e autoplay.
+                                    </p>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                        class="org-carousel-prev"
+                        type="button"
+                        data-org-carousel-prev
+                        aria-label="Slide anterior"
+                >
+                    ‹
+                </button>
+
+
+                <button
+                        class="org-carousel-next"
+                        type="button"
+                        data-org-carousel-next
+                        aria-label="Próximo slide"
+                >
+                    ›
+                </button>
+
+
+                <div
+                        class="org-carousel-dots"
+                        data-org-carousel-dots
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===============================================
+             Cards
+             =============================================== -->
+
+        <section class="org-mt-8">
+
+            <h2>Cards responsivos</h2>
+
+            <div
+                    class="org-carousel org-carousel-nav-outside"
+                    data-org-carousel
+                    data-org-items="3"
+                    data-org-items-mobile="1"
+                    data-org-items-tablet="2"
+                    data-org-items-desktop="3"
+                    data-org-gap="24"
+                    data-org-loop="true"
+                    data-org-drag="true"
+                    tabindex="0"
+            >
+
+                <div class="org-carousel-viewport">
+
+                    <div class="org-carousel-track">
+
+                        <article class="org-carousel-slide">
+                            <div class="org-card">
+                                <div class="org-card-body">
+                                    <h3>Buttons</h3>
+                                    <p>
+                                        Botões e ações.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+
+                        <article class="org-carousel-slide">
+                            <div class="org-card">
+                                <div class="org-card-body">
+                                    <h3>Forms</h3>
+                                    <p>
+                                        Campos e formulários.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+
+                        <article class="org-carousel-slide">
+                            <div class="org-card">
+                                <div class="org-card-body">
+                                    <h3>Modal</h3>
+                                    <p>
+                                        Diálogos acessíveis.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+
+                        <article class="org-carousel-slide">
+                            <div class="org-card">
+                                <div class="org-card-body">
+                                    <h3>Tables</h3>
+                                    <p>
+                                        Exibição de dados.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+
+                        <article class="org-carousel-slide">
+                            <div class="org-card">
+                                <div class="org-card-body">
+                                    <h3>Timeline</h3>
+                                    <p>
+                                        Histórico de eventos.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+
+                        <article class="org-carousel-slide">
+                            <div class="org-card">
+                                <div class="org-card-body">
+                                    <h3>Stepper</h3>
+                                    <p>
+                                        Fluxos em etapas.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                        class="org-carousel-prev"
+                        type="button"
+                        data-org-carousel-prev
+                        aria-label="Anterior"
+                >
+                    ‹
+                </button>
+
+
+                <button
+                        class="org-carousel-next"
+                        type="button"
+                        data-org-carousel-next
+                        aria-label="Próximo"
+                >
+                    ›
+                </button>
+
+
+                <div
+                        class="org-carousel-dots"
+                        data-org-carousel-dots
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===============================================
+             Autoplay
+             =============================================== -->
+
+        <section class="org-mt-8">
+
+            <h2>Autoplay</h2>
+
+            <div
+                    class="org-carousel"
+                    data-org-carousel
+                    data-org-items="1"
+                    data-org-loop="true"
+                    data-org-autoplay="3000"
+                    data-org-pause-hover="true"
+                    data-org-drag="true"
+                    tabindex="0"
+            >
+
+                <div class="org-carousel-viewport">
+
+                    <div class="org-carousel-track">
+
+                        <div class="org-carousel-slide">
+                            <div class="org-alert org-alert-info">
+                                Slide automático 1
+                            </div>
+                        </div>
+
+                        <div class="org-carousel-slide">
+                            <div class="org-alert org-alert-success">
+                                Slide automático 2
+                            </div>
+                        </div>
+
+                        <div class="org-carousel-slide">
+                            <div class="org-alert org-alert-warning">
+                                Slide automático 3
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div
+                        class="org-carousel-dots"
+                        data-org-carousel-dots
+                ></div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<script
+        type="module"
+        src="../src/js/organic.js"
+></script>
+
+</body>
+</html>

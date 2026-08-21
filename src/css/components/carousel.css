@@ -1,0 +1,254 @@
+/**
+ * Organic UI v2
+ * Carousel
+ */
+
+/* ==========================================================
+   Base
+   ========================================================== */
+
+.org-carousel {
+    --org-carousel-items: 1;
+    --org-carousel-gap: var(--org-space-4);
+
+    position: relative;
+
+    width: 100%;
+}
+
+.org-carousel-viewport {
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: inherit;
+
+    touch-action: pan-y;
+}
+
+.org-carousel-track {
+    display: flex;
+    gap: var(--org-carousel-gap);
+
+    transition: transform var(--org-transition);
+
+    will-change: transform;
+}
+
+.org-carousel.is-dragging .org-carousel-track {
+    transition: none;
+}
+
+
+/* ==========================================================
+   Slide
+   ========================================================== */
+
+.org-carousel-slide {
+    flex:
+            0 0
+            calc(
+                    (
+                    100% -
+                    (
+                    var(--org-carousel-gap) *
+                    (var(--org-carousel-items) - 1)
+                    )
+                    ) /
+                    var(--org-carousel-items)
+            );
+
+    min-width: 0;
+}
+
+
+/* ==========================================================
+   Navigation
+   ========================================================== */
+
+.org-carousel-prev,
+.org-carousel-next {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    padding: 0;
+
+    background: var(--org-bg);
+    color: var(--org-text);
+
+    border: 1px solid var(--org-border);
+    border-radius: 50%;
+
+    box-shadow: var(--org-shadow-sm);
+
+    font: inherit;
+    font-size: 1.25rem;
+
+    cursor: pointer;
+
+    transform: translateY(-50%);
+
+    transition:
+            background-color var(--org-transition-fast),
+            border-color var(--org-transition-fast),
+            opacity var(--org-transition-fast);
+}
+
+.org-carousel-prev {
+    left: var(--org-space-3);
+}
+
+.org-carousel-next {
+    right: var(--org-space-3);
+}
+
+.org-carousel-prev:hover,
+.org-carousel-next:hover {
+    background: var(--org-surface);
+    border-color: var(--org-primary);
+}
+
+.org-carousel-prev:disabled,
+.org-carousel-next:disabled {
+    opacity: .35;
+    cursor: not-allowed;
+}
+
+
+/* Outside navigation */
+
+.org-carousel-nav-outside .org-carousel-prev {
+    left: calc(-1 * var(--org-space-5));
+}
+
+.org-carousel-nav-outside .org-carousel-next {
+    right: calc(-1 * var(--org-space-5));
+}
+
+
+/* ==========================================================
+   Dots
+   ========================================================== */
+
+.org-carousel-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--org-space-2);
+
+    margin-top: var(--org-space-4);
+}
+
+.org-carousel-dot {
+    width: .5rem;
+    height: .5rem;
+
+    padding: 0;
+
+    background: var(--org-border);
+
+    border: 0;
+    border-radius: var(--org-radius-pill);
+
+    cursor: pointer;
+
+    transition:
+            width var(--org-transition-fast),
+            background-color var(--org-transition-fast);
+}
+
+.org-carousel-dot:hover {
+    background: var(--org-text-muted);
+}
+
+.org-carousel-dot.is-active {
+    width: 1.5rem;
+
+    background: var(--org-primary);
+}
+
+
+/* ==========================================================
+   Image
+   ========================================================== */
+
+.org-carousel-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+}
+
+
+/* ==========================================================
+   Drag
+   ========================================================== */
+
+.org-carousel[data-org-drag="true"] .org-carousel-viewport {
+    cursor: grab;
+}
+
+.org-carousel.is-dragging .org-carousel-viewport {
+    cursor: grabbing;
+    user-select: none;
+}
+
+
+/* ==========================================================
+   No transition
+   ========================================================== */
+
+.org-carousel.no-transition .org-carousel-track {
+    transition: none;
+}
+
+
+/* ==========================================================
+   Reduced motion
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .org-carousel-track,
+    .org-carousel-dot,
+    .org-carousel-prev,
+    .org-carousel-next {
+        transition: none;
+    }
+
+}
+
+
+/* ==========================================================
+   Mobile
+   ========================================================== */
+
+@media (max-width: 575px) {
+
+    .org-carousel-prev {
+        left: var(--org-space-2);
+    }
+
+    .org-carousel-next {
+        right: var(--org-space-2);
+    }
+
+    .org-carousel-nav-outside .org-carousel-prev {
+        left: var(--org-space-2);
+    }
+
+    .org-carousel-nav-outside .org-carousel-next {
+        right: var(--org-space-2);
+    }
+
+}
