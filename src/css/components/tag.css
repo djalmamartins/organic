@@ -1,0 +1,128 @@
+/**
+ * Organic UI v2
+ * Tag
+ */
+
+.org-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--org-space-1);
+
+    min-height: 1.75rem;
+    padding: .25rem .6rem;
+
+    background: var(--org-light);
+    color: var(--org-text);
+
+    border: 1px solid var(--org-border);
+    border-radius: var(--org-radius-pill);
+
+    font-size: var(--org-font-size-xs);
+    font-weight: var(--org-font-weight-medium);
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+/* Variants */
+
+.org-tag-primary {
+    background: color-mix(
+            in srgb,
+            var(--org-primary) 12%,
+            var(--org-white)
+    );
+
+    color: var(--org-primary-dark);
+    border-color: color-mix(
+            in srgb,
+            var(--org-primary) 30%,
+            var(--org-white)
+    );
+}
+
+.org-tag-success {
+    background: color-mix(
+            in srgb,
+            var(--org-success) 12%,
+            var(--org-white)
+    );
+
+    color: var(--org-success);
+}
+
+.org-tag-info {
+    background: color-mix(
+            in srgb,
+            var(--org-info) 12%,
+            var(--org-white)
+    );
+
+    color: var(--org-info);
+}
+
+.org-tag-warning {
+    background: color-mix(
+            in srgb,
+            var(--org-warning) 16%,
+            var(--org-white)
+    );
+
+    color: var(--org-dark);
+}
+
+.org-tag-danger {
+    background: color-mix(
+            in srgb,
+            var(--org-danger) 12%,
+            var(--org-white)
+    );
+
+    color: var(--org-danger);
+}
+
+/* Icon */
+
+.org-tag-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Remove */
+
+.org-tag-remove {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 1rem;
+    height: 1rem;
+
+    padding: 0;
+
+    background: transparent;
+    color: currentColor;
+
+    border: 0;
+    border-radius: 50%;
+
+    font: inherit;
+    line-height: 1;
+
+    cursor: pointer;
+
+    opacity: .7;
+}
+
+.org-tag-remove:hover {
+    opacity: 1;
+}
+
+/* Group */
+
+.org-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--org-space-2);
+}
