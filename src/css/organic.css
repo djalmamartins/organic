@@ -45,3 +45,5 @@
 @import "./components/code.css";
 @import "./components/empty-state.css";
 @import "./components/upload.css";
+@import "./components/stepper.css";
+@import "./components/timeline.css";

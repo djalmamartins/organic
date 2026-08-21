@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+    >
+
+    <title>Organic UI — Stepper</title>
+
+    <link
+            rel="stylesheet"
+            href="../src/css/organic.css"
+    >
+</head>
+
+<body>
+
+<main class="org-container">
+
+    <div class="org-py-8">
+
+        <h1>Stepper / Wizard</h1>
+
+        <div
+                class="org-wizard"
+                data-org-wizard
+        >
+
+            <ol class="org-stepper">
+
+                <li
+                        class="org-step"
+                        data-org-step
+                >
+                    <span class="org-step-indicator">
+                        1
+                    </span>
+
+                    <div class="org-step-content">
+                        <strong class="org-step-title">
+                            Conta
+                        </strong>
+
+                        <span class="org-step-text">
+                            Dados de acesso
+                        </span>
+                    </div>
+                </li>
+
+
+                <li
+                        class="org-step"
+                        data-org-step
+                >
+                    <span class="org-step-indicator">
+                        2
+                    </span>
+
+                    <div class="org-step-content">
+                        <strong class="org-step-title">
+                            Perfil
+                        </strong>
+
+                        <span class="org-step-text">
+                            Informações pessoais
+                        </span>
+                    </div>
+                </li>
+
+
+                <li
+                        class="org-step"
+                        data-org-step
+                >
+                    <span class="org-step-indicator">
+                        3
+                    </span>
+
+                    <div class="org-step-content">
+                        <strong class="org-step-title">
+                            Preferências
+                        </strong>
+
+                        <span class="org-step-text">
+                            Configure sua conta
+                        </span>
+                    </div>
+                </li>
+
+
+                <li
+                        class="org-step"
+                        data-org-step
+                >
+                    <span class="org-step-indicator">
+                        4
+                    </span>
+
+                    <div class="org-step-content">
+                        <strong class="org-step-title">
+                            Concluir
+                        </strong>
+
+                        <span class="org-step-text">
+                            Revisar informações
+                        </span>
+                    </div>
+                </li>
+
+            </ol>
+
+
+            <div class="org-wizard-content">
+
+                <section data-org-step-panel>
+
+                    <h2>Crie sua conta</h2>
+
+                    <p>
+                        Informe os dados utilizados para
+                        acessar o sistema.
+                    </p>
+
+                    <div class="org-form-group">
+
+                        <label
+                                class="org-label"
+                                for="wizard-email"
+                        >
+                            E-mail
+                        </label>
+
+                        <input
+                                class="org-input"
+                                id="wizard-email"
+                                type="email"
+                                placeholder="email@exemplo.com"
+                        >
+
+                    </div>
+
+                </section>
+
+
+                <section
+                        data-org-step-panel
+                        hidden
+                >
+
+                    <h2>Seu perfil</h2>
+
+                    <p>
+                        Agora precisamos de algumas
+                        informações sobre você.
+                    </p>
+
+                </section>
+
+
+                <section
+                        data-org-step-panel
+                        hidden
+                >
+
+                    <h2>Preferências</h2>
+
+                    <p>
+                        Escolha como deseja utilizar
+                        sua conta.
+                    </p>
+
+                </section>
+
+
+                <section
+                        data-org-step-panel
+                        hidden
+                >
+
+                    <h2>Tudo pronto!</h2>
+
+                    <div class="org-alert org-alert-success">
+                        Cadastro configurado com sucesso.
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <div class="org-wizard-actions">
+
+                <button
+                        class="org-btn org-btn-light"
+                        type="button"
+                        data-org-step-prev
+                >
+                    Voltar
+                </button>
+
+                <button
+                        class="org-btn org-btn-primary"
+                        type="button"
+                        data-org-step-next
+                >
+                    Continuar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<script
+        type="module"
+        src="../src/js/organic.js"
+></script>
+
+</body>
+</html>

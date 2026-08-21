@@ -1,0 +1,236 @@
+/**
+ * Organic UI v2
+ * Stepper / Wizard
+ */
+
+/* ==========================================================
+   Stepper
+   ========================================================== */
+
+.org-stepper {
+    display: flex;
+    align-items: flex-start;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+/* ==========================================================
+   Step
+   ========================================================== */
+
+.org-step {
+    position: relative;
+
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 0;
+
+    text-align: center;
+}
+
+
+/* Line */
+
+.org-step:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    top: 1rem;
+    left: calc(50% + 1.25rem);
+
+    width: calc(100% - 2.5rem);
+    height: 2px;
+
+    background: var(--org-border);
+}
+
+
+/* ==========================================================
+   Indicator
+   ========================================================== */
+
+.org-step-indicator {
+    position: relative;
+    z-index: 1;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2rem;
+    height: 2rem;
+
+    background: var(--org-bg);
+    color: var(--org-text-muted);
+
+    border: 2px solid var(--org-border);
+    border-radius: 50%;
+
+    font-size: var(--org-font-size-sm);
+    font-weight: var(--org-font-weight-semibold);
+
+    transition:
+            background-color var(--org-transition-fast),
+            border-color var(--org-transition-fast),
+            color var(--org-transition-fast);
+}
+
+
+/* ==========================================================
+   Content
+   ========================================================== */
+
+.org-step-content {
+    margin-top: var(--org-space-2);
+}
+
+.org-step-title {
+    display: block;
+
+    color: var(--org-text);
+
+    font-size: var(--org-font-size-sm);
+    font-weight: var(--org-font-weight-semibold);
+}
+
+.org-step-text {
+    display: block;
+
+    margin-top: var(--org-space-1);
+
+    color: var(--org-text-muted);
+
+    font-size: var(--org-font-size-xs);
+}
+
+
+/* ==========================================================
+   Active
+   ========================================================== */
+
+.org-step.is-active .org-step-indicator {
+    background: var(--org-primary);
+    color: var(--org-white);
+
+    border-color: var(--org-primary);
+}
+
+.org-step.is-active .org-step-title {
+    color: var(--org-primary);
+}
+
+
+/* ==========================================================
+   Completed
+   ========================================================== */
+
+.org-step.is-complete .org-step-indicator {
+    background: var(--org-success);
+    color: var(--org-white);
+
+    border-color: var(--org-success);
+}
+
+.org-step.is-complete:not(:last-child)::after {
+    background: var(--org-success);
+}
+
+
+/* ==========================================================
+   Wizard
+   ========================================================== */
+
+.org-wizard {
+    width: 100%;
+}
+
+.org-wizard-content {
+    margin-top: var(--org-space-6);
+}
+
+.org-wizard-panel[hidden] {
+    display: none;
+}
+
+
+/* ==========================================================
+   Actions
+   ========================================================== */
+
+.org-wizard-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--org-space-3);
+
+    margin-top: var(--org-space-6);
+    padding-top: var(--org-space-4);
+
+    border-top: 1px solid var(--org-border);
+}
+
+
+/* ==========================================================
+   Vertical
+   ========================================================== */
+
+.org-stepper-vertical {
+    flex-direction: column;
+}
+
+.org-stepper-vertical .org-step {
+    flex: none;
+    flex-direction: row;
+    align-items: flex-start;
+
+    width: 100%;
+    min-height: 4.5rem;
+
+    text-align: left;
+}
+
+.org-stepper-vertical .org-step-content {
+    margin-top: 0;
+    margin-left: var(--org-space-3);
+}
+
+.org-stepper-vertical
+.org-step:not(:last-child)::after {
+    top: 2rem;
+    bottom: 0;
+    left: .95rem;
+
+    width: 2px;
+    height: auto;
+}
+
+
+/* ==========================================================
+   Mobile
+   ========================================================== */
+
+@media (max-width: 575px) {
+
+    .org-step-text {
+        display: none;
+    }
+
+    .org-step-title {
+        font-size: var(--org-font-size-xs);
+    }
+
+    .org-wizard-actions {
+        flex-wrap: wrap;
+    }
+
+}
