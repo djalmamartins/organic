@@ -1,0 +1,106 @@
+/**
+ * Organic UI v2
+ * Button Group
+ */
+
+.org-btn-group {
+    display: inline-flex;
+    align-items: stretch;
+}
+
+
+/* ==========================================================
+   Buttons
+   ========================================================== */
+
+.org-btn-group > .org-btn {
+    position: relative;
+
+    border-radius: 0;
+}
+
+.org-btn-group > .org-btn + .org-btn {
+    margin-left: -1px;
+}
+
+
+/* ==========================================================
+   First / Last
+   ========================================================== */
+
+.org-btn-group > .org-btn:first-child {
+    border-top-left-radius: var(--org-radius);
+    border-bottom-left-radius: var(--org-radius);
+}
+
+.org-btn-group > .org-btn:last-child {
+    border-top-right-radius: var(--org-radius);
+    border-bottom-right-radius: var(--org-radius);
+}
+
+
+/* ==========================================================
+   Hover / Focus
+   ========================================================== */
+
+.org-btn-group > .org-btn:hover,
+.org-btn-group > .org-btn:focus-visible {
+    z-index: 1;
+}
+
+
+/* ==========================================================
+   Vertical
+   ========================================================== */
+
+.org-btn-group-vertical {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.org-btn-group-vertical > .org-btn {
+    border-radius: 0;
+}
+
+.org-btn-group-vertical > .org-btn + .org-btn {
+    margin-top: -1px;
+}
+
+.org-btn-group-vertical > .org-btn:first-child {
+    border-top-left-radius: var(--org-radius);
+    border-top-right-radius: var(--org-radius);
+}
+
+.org-btn-group-vertical > .org-btn:last-child {
+    border-bottom-right-radius: var(--org-radius);
+    border-bottom-left-radius: var(--org-radius);
+}
+
+
+/* ==========================================================
+   Full width
+   ========================================================== */
+
+.org-btn-group-full {
+    display: flex;
+    width: 100%;
+}
+
+.org-btn-group-full > .org-btn {
+    flex: 1 1 0;
+}
+
+
+/* ==========================================================
+   Separated
+   ========================================================== */
+
+.org-btn-group-separated {
+    gap: var(--org-space-2);
+}
+
+.org-btn-group-separated > .org-btn {
+    margin: 0;
+    border-radius: var(--org-radius);
+}
