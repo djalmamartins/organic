@@ -11,3 +11,4 @@ import "./components/toast.js";
 import "./components/collapse.js";
 import "./components/popover.js";
 import "./components/offcanvas.js";
+import "./components/code.js";

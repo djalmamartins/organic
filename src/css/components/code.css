@@ -1,0 +1,156 @@
+/**
+ * Organic UI v2
+ * Code
+ */
+
+.org-code {
+    overflow: hidden;
+
+    background: var(--org-dark);
+    color: var(--org-light);
+
+    border: 1px solid var(--org-border);
+    border-radius: var(--org-radius-lg);
+
+    box-shadow: var(--org-shadow-sm);
+}
+
+
+/* Header */
+
+.org-code-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--org-space-3);
+
+    min-height: 3rem;
+    padding: 0 var(--org-space-4);
+
+    background: color-mix(
+            in srgb,
+            var(--org-dark) 92%,
+            var(--org-white)
+    );
+
+    border-bottom: 1px solid rgb(255 255 255 / 10%);
+}
+
+
+/* Tabs */
+
+.org-code-tabs {
+    display: flex;
+    align-items: center;
+    gap: var(--org-space-4);
+}
+
+.org-code-tab {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 3rem;
+    padding: 0;
+
+    background: transparent;
+    color: rgb(255 255 255 / 65%);
+
+    border: 0;
+
+    font: inherit;
+    font-size: var(--org-font-size-xs);
+    font-weight: var(--org-font-weight-medium);
+
+    cursor: pointer;
+}
+
+.org-code-tab:hover {
+    color: var(--org-white);
+}
+
+.org-code-tab.is-active {
+    color: var(--org-white);
+}
+
+.org-code-tab.is-active::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 2px;
+
+    background: var(--org-primary);
+}
+
+
+/* Copy */
+
+.org-code-copy {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--org-space-1);
+
+    padding: var(--org-space-1) var(--org-space-2);
+
+    background: transparent;
+    color: rgb(255 255 255 / 70%);
+
+    border: 0;
+    border-radius: var(--org-radius);
+
+    font: inherit;
+    font-size: var(--org-font-size-xs);
+
+    cursor: pointer;
+
+    transition:
+            background-color var(--org-transition-fast),
+            color var(--org-transition-fast);
+}
+
+.org-code-copy:hover {
+    background: rgb(255 255 255 / 8%);
+    color: var(--org-white);
+}
+
+
+/* Body */
+
+.org-code-body {
+    overflow-x: auto;
+}
+
+.org-code pre {
+    margin: 0;
+    padding: var(--org-space-4);
+
+    background: transparent;
+    color: inherit;
+
+    border-radius: 0;
+}
+
+.org-code code {
+    padding: 0;
+
+    background: transparent;
+    color: inherit;
+
+    font-size: var(--org-font-size-sm);
+    line-height: var(--org-line-height-lg);
+
+    white-space: pre;
+}
+
+
+/* Panels */
+
+.org-code-panel[hidden] {
+    display: none;
+}
