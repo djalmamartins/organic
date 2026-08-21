@@ -47,7 +47,80 @@
     <hr>
     <hr>
     <hr>
+    <section>
+        <h2>Range</h2>
+
+        <div class="preview">
+
+            <div class="org-range">
+
+                <label
+                        class="org-label"
+                        for="volume"
+                >
+                    Volume
+                </label>
+
+                <input
+                        class="org-range-input"
+                        id="volume"
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="65"
+                >
+
+                <div class="org-range-labels">
+                    <span>0</span>
+                    <span>100</span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
     <hr>
+    <section>
+        <h2>Select</h2>
+
+        <div class="preview">
+
+            <div class="org-form-group">
+                <label class="org-label" for="select-country">
+                    País
+                </label>
+
+                <div class="org-select-wrap">
+                    <select
+                            class="org-select"
+                            id="select-country"
+                    >
+                        <option value="">Selecione</option>
+                        <option>Brasil</option>
+                        <option>Portugal</option>
+                        <option>Argentina</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="org-form-group">
+                <label class="org-label" for="select-disabled">
+                    Desabilitado
+                </label>
+
+                <div class="org-select-wrap">
+                    <select
+                            class="org-select"
+                            id="select-disabled"
+                            disabled
+                    >
+                        <option>Indisponível</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+    </section>
     <hr>
     <section>
         <h2>Checkbox & Radio</h2>

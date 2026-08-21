@@ -1,0 +1,92 @@
+/**
+ * Organic UI v2
+ * Select
+ */
+
+.org-select-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.org-select {
+    width: 100%;
+    min-height: 2.75rem;
+
+    padding:
+            var(--org-space-3)
+            2.5rem
+            var(--org-space-3)
+            var(--org-space-4);
+
+    appearance: none;
+
+    background-color: var(--org-bg);
+    color: var(--org-text);
+
+    border: 1px solid var(--org-border);
+    border-radius: var(--org-radius);
+
+    font: inherit;
+
+    cursor: pointer;
+
+    transition:
+            border-color var(--org-transition-fast),
+            box-shadow var(--org-transition-fast);
+}
+
+.org-select-wrap::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    right: var(--org-space-4);
+
+    width: .45rem;
+    height: .45rem;
+
+    border-right: 2px solid var(--org-text-muted);
+    border-bottom: 2px solid var(--org-text-muted);
+
+    pointer-events: none;
+
+    transform:
+            translateY(-70%)
+            rotate(45deg);
+}
+
+.org-select:focus {
+    border-color: var(--org-primary);
+    outline: 0;
+
+    box-shadow: 0 0 0 3px
+    color-mix(
+            in srgb,
+            var(--org-primary) 20%,
+            transparent
+    );
+}
+
+.org-select:disabled {
+    background-color: var(--org-light);
+    color: var(--org-text-muted);
+
+    cursor: not-allowed;
+    opacity: .7;
+}
+
+/* Sizes */
+
+.org-select-sm {
+    min-height: 2.25rem;
+    padding-top: var(--org-space-2);
+    padding-bottom: var(--org-space-2);
+
+    font-size: var(--org-font-size-sm);
+}
+
+.org-select-lg {
+    min-height: 3.25rem;
+
+    font-size: var(--org-font-size-lg);
+}

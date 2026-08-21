@@ -34,3 +34,5 @@
 @import "./components/button-group.css";
 @import "./components/input-group.css";
 @import "./components/check.css";
+@import "./components/select.css";
+@import "./components/range.css";

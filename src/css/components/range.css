@@ -1,0 +1,87 @@
+/**
+ * Organic UI v2
+ * Range
+ */
+
+.org-range {
+    width: 100%;
+}
+
+.org-range-input {
+    width: 100%;
+    height: .4rem;
+
+    appearance: none;
+
+    background: var(--org-border);
+    border-radius: var(--org-radius-pill);
+
+    cursor: pointer;
+}
+
+/* WebKit */
+
+.org-range-input::-webkit-slider-thumb {
+    width: 1.1rem;
+    height: 1.1rem;
+
+    appearance: none;
+
+    background: var(--org-primary);
+
+    border: 3px solid var(--org-white);
+    border-radius: 50%;
+
+    box-shadow: var(--org-shadow-sm);
+
+    cursor: grab;
+}
+
+.org-range-input::-webkit-slider-thumb:active {
+    cursor: grabbing;
+}
+
+/* Firefox */
+
+.org-range-input::-moz-range-thumb {
+    width: 1rem;
+    height: 1rem;
+
+    background: var(--org-primary);
+
+    border: 3px solid var(--org-white);
+    border-radius: 50%;
+
+    box-shadow: var(--org-shadow-sm);
+
+    cursor: grab;
+}
+
+.org-range-input:focus-visible {
+    outline: 3px solid color-mix(
+            in srgb,
+            var(--org-primary) 25%,
+            transparent
+    );
+
+    outline-offset: 4px;
+}
+
+.org-range-input:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+
+/* Labels */
+
+.org-range-labels {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: var(--org-space-2);
+
+    color: var(--org-text-muted);
+
+    font-size: var(--org-font-size-xs);
+}
