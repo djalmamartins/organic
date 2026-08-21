@@ -83,8 +83,167 @@
     <hr>    <hr>
     <hr>
     <hr>
-    <hr>    <hr>
+    <section>
+        <h2>File Upload</h2>
 
+        <div class="preview">
+
+            <div style="width: 100%;">
+
+                <label
+                        class="org-upload"
+                        data-org-upload
+                >
+
+                    <input
+                            class="org-upload-input"
+                            type="file"
+                            multiple
+                            data-org-upload-input
+                    >
+
+                    <span
+                            class="org-upload-icon"
+                            aria-hidden="true"
+                    >
+                    ↑
+                </span>
+
+                    <strong class="org-upload-title">
+                        Arraste arquivos ou clique para selecionar
+                    </strong>
+
+                    <p class="org-upload-text">
+                        PNG, JPG, PDF ou outros arquivos permitidos.
+                    </p>
+
+                </label>
+
+                <div
+                        class="org-upload-files"
+                        data-org-upload-files
+                ></div>
+
+            </div>
+
+        </div>
+    </section>
+    <hr>
+    <section>
+        <h2>Empty State</h2>
+
+        <div class="org-empty">
+
+            <div class="org-empty-icon" aria-hidden="true">
+                +
+            </div>
+
+            <h3 class="org-empty-title">
+                Nenhum projeto encontrado
+            </h3>
+
+            <p class="org-empty-text">
+                Você ainda não possui projetos cadastrados.
+                Crie o primeiro para começar.
+            </p>
+
+            <div class="org-empty-actions">
+
+                <button class="org-btn org-btn-primary">
+                    Criar projeto
+                </button>
+
+                <button class="org-btn org-btn-light">
+                    Saiba mais
+                </button>
+
+            </div>
+
+        </div>
+    </section>
+    <hr>
+    <section>
+        <h2>Code</h2>
+
+        <div
+                class="org-code"
+                data-org-code
+        >
+
+            <header class="org-code-header">
+
+                <div class="org-code-tabs">
+
+                    <button
+                            class="org-code-tab is-active"
+                            type="button"
+                            data-org-code-tab="html"
+                    >
+                        HTML
+                    </button>
+
+                    <button
+                            class="org-code-tab"
+                            type="button"
+                            data-org-code-tab="css"
+                    >
+                        CSS
+                    </button>
+
+                    <button
+                            class="org-code-tab"
+                            type="button"
+                            data-org-code-tab="js"
+                    >
+                        JavaScript
+                    </button>
+
+                </div>
+
+
+                <button
+                        class="org-code-copy"
+                        type="button"
+                        data-org-code-copy
+                >
+                    Copiar
+                </button>
+
+            </header>
+
+
+            <div class="org-code-body">
+
+                <div
+                        data-org-code-panel="html"
+                >
+<pre><code>&lt;button class="org-btn org-btn-primary"&gt;
+    Organic
+&lt;/button&gt;</code></pre>
+                </div>
+
+
+                <div
+                        data-org-code-panel="css"
+                        hidden
+                >
+<pre><code>.org-btn {
+    display: inline-flex;
+}</code></pre>
+                </div>
+
+
+                <div
+                        data-org-code-panel="js"
+                        hidden
+                >
+                    <pre><code>console.log("Organic UI");</code></pre>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
     <hr>
     <header class="org-navbar">
 

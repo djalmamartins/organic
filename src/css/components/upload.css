@@ -1,0 +1,130 @@
+/**
+ * Organic UI v2
+ * File Upload
+ */
+
+.org-upload {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--org-space-3);
+
+    min-height: 12rem;
+    padding: var(--org-space-6);
+
+    background: var(--org-bg);
+
+    border: 2px dashed var(--org-border);
+    border-radius: var(--org-radius-lg);
+
+    text-align: center;
+
+    transition:
+            border-color var(--org-transition-fast),
+            background-color var(--org-transition-fast);
+}
+
+.org-upload:hover,
+.org-upload.is-dragging {
+    border-color: var(--org-primary);
+
+    background: color-mix(
+            in srgb,
+            var(--org-primary) 4%,
+            var(--org-white)
+    );
+}
+
+.org-upload-input {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
+    cursor: pointer;
+}
+
+.org-upload-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 3rem;
+    height: 3rem;
+
+    background: color-mix(
+            in srgb,
+            var(--org-primary) 10%,
+            var(--org-white)
+    );
+
+    color: var(--org-primary);
+
+    border-radius: var(--org-radius-pill);
+
+    font-size: var(--org-font-size-xl);
+}
+
+.org-upload-title {
+    margin: 0;
+
+    font-size: var(--org-font-size);
+    font-weight: var(--org-font-weight-semibold);
+}
+
+.org-upload-text {
+    margin: 0;
+
+    color: var(--org-text-muted);
+    font-size: var(--org-font-size-sm);
+}
+
+.org-upload-files {
+    display: flex;
+    flex-direction: column;
+    gap: var(--org-space-2);
+
+    margin-top: var(--org-space-4);
+}
+
+.org-upload-file {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--org-space-3);
+
+    padding: var(--org-space-3);
+
+    background: var(--org-surface);
+
+    border: 1px solid var(--org-border);
+    border-radius: var(--org-radius);
+}
+
+.org-upload-file-info {
+    min-width: 0;
+}
+
+.org-upload-file-name {
+    display: block;
+
+    overflow: hidden;
+
+    font-size: var(--org-font-size-sm);
+    font-weight: var(--org-font-weight-medium);
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.org-upload-file-size {
+    color: var(--org-text-muted);
+
+    font-size: var(--org-font-size-xs);
+}

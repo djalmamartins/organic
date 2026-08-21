@@ -1,0 +1,68 @@
+/**
+ * Organic UI v2
+ * Empty State
+ */
+
+.org-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--org-space-3);
+
+    min-height: 16rem;
+    padding: var(--org-space-8);
+
+    text-align: center;
+
+    background: var(--org-bg);
+
+    border: 1px dashed var(--org-border);
+    border-radius: var(--org-radius-lg);
+}
+
+.org-empty-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 4rem;
+    height: 4rem;
+
+    background: color-mix(
+            in srgb,
+            var(--org-primary) 10%,
+            var(--org-white)
+    );
+
+    color: var(--org-primary);
+
+    border-radius: var(--org-radius-pill);
+
+    font-size: var(--org-font-size-2xl);
+}
+
+.org-empty-title {
+    margin: 0;
+
+    font-size: var(--org-font-size-xl);
+    font-weight: var(--org-font-weight-semibold);
+}
+
+.org-empty-text {
+    max-width: 30rem;
+    margin: 0;
+
+    color: var(--org-text-muted);
+}
+
+.org-empty-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--org-space-2);
+
+    margin-top: var(--org-space-2);
+
+    flex-wrap: wrap;
+}
